@@ -1,0 +1,14 @@
+.page__inner {
+  	position: relative;
+	display: flex;
+	flex-direction: column;
+	z-index: 2;
+	min-height: 100vh;
+	height: auto;
+	.page__content {
+		flex-grow: 1;
+	}
+	.page__footer-wrapper {
+		flex-shrink: 0;
+	}
+}
