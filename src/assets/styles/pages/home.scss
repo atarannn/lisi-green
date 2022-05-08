@@ -15,14 +15,22 @@ section {
     background-repeat: no-repeat;
     z-index: -1;
   }
+  .green-block {
+    background: $green;
+    height: 100%;
+    overflow: hidden;
+  }
   &-block-1 {
+    background: $green;
+    transition: background .4s ease-in-out;
     .main-background-1 {
+      transition: background-image .4s ease-in-out;
       background-image: url('../images/head-screen/block-1-1.jpg');
       background-size: contain;
     }
     .logo-background {
       position: absolute;
-      top: 110px;
+      top: 140px;
       left: 0;
       z-index: 1;
       width: 1018px;
@@ -31,9 +39,11 @@ section {
         height: 100%;
         width: 100%;
         fill: $bc;
+        transition: fill .2s ease-in-out;
       }
     }
     .building {
+      transition: background-image .2s ease-in-out;
       background-image: url('../images/head-screen/block-1-2.png');
       position: absolute;
       left: 0;
@@ -57,14 +67,17 @@ section {
   }
   .animation-1 {
     .main-background-1 {
-      background: $green;
+      transition: background-image .4s ease-in-out;
+      background-image: none;
     }
     .logo-background {
       svg {
+        transition: fill .2s ease-in-out;
         fill: $blue;
       }
     }
     .building {
+      transition: background-image .4s ease-in-out;
       background-image: url('../images/head-screen/block-1-3.png');
     }
   }
@@ -98,12 +111,20 @@ section {
   .urban {
     z-index: 5;
   }
+  .blue-block {
+    background-color: $blue;
+    overflow: hidden;
+  }
   &-block-2 {
+    background: $blue;
+    transition: background .4s ease-in-out;
     .main-background-2 {
+      transition: background-image .4s ease-in-out;
       background-image: url('../images/head-screen/block-2-1.jpg');
       background-size: cover;
     }
     .building {
+      transition: background-image .2s ease-in-out;
       background-image: url('../images/head-screen/block-2-2.png');
       position: absolute;
       right: 0;
@@ -118,18 +139,28 @@ section {
   }
   .animation-2 {
     .main-background-2 {
-      background: $blue;
+      transition: background-image .4s ease-in-out;
+      background-image: none;
     }
     .building {
+      transition: background-image .2s ease-in-out;
       background-image: url('../images/head-screen/block-2-3.png');
     }
   }
+  .mint-block {
+    background-color: $mint;
+    overflow: hidden;
+  }
   &-block-3 {
+    background: $mint;
+    transition: background .4s ease-in-out;
     .main-background-3 {
+      transition: background-image .4s ease-in-out;
       background-image: url('../images/head-screen/block-3-1.jpg');
       background-size: cover;
     }
     .building {
+      transition: background-image .2s ease-in-out;
       background-image: url('../images/head-screen/block-3-2.png');
       position: absolute;
       right: 0;
@@ -144,15 +175,17 @@ section {
   }
   .animation-3 {
     .main-background-3 {
-      background: $mint;
+      transition: background-image .4s ease-in-out;
+      background-image: none;
     }
     .building {
+      transition: background-image .2s ease-in-out;
       background-image: url('../images/head-screen/block-3-3.png');
     }
   }
   &-text-wrapper {
     position: absolute;
-    left: 11%;
+    left: 88px;
     top: 60px;
     z-index: 2;
     display: flex;
@@ -192,10 +225,12 @@ section {
       fill: transparent;
       height: 40px;
       width: 25px;
+      animation: 3s cubic-bezier(0.46, 0.03, 0.52, 0.96) 0s infinite mousemove;
     }
   }
 }
 .advantages-screen {
+  background-color: $green;
   display: grid;
   grid-template-columns: repeat(24, 1fr);
   grid-template-rows: repeat(5, 1fr);
@@ -291,6 +326,7 @@ section {
   }
 }
 .location-screen {
+  background-color: $green;
   &-head {
     margin-bottom: var(--offset50);
   }
@@ -343,6 +379,9 @@ section {
         svg {
           height: 40px;
           width: 40px;
+          @include from(1024px) {
+            cursor: pointer;
+          }
         }
       }
     }

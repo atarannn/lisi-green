@@ -3,9 +3,8 @@ extends ../layout/main
 block variable
   -
     var title_page = 'home'
-    var id_page = 'flat-page'
+    var id_page = 'home-page'
     var class_page = 'home'
-    var breadcrumbsBtn = 'filter'
     var breadcrumbsSubitem = [
       {
         label: 'About',
@@ -55,36 +54,40 @@ block scripts
   script(defer src='./assets/scripts/index.js')
   script(defer src='./assets/scripts/libs.js')
   script(defer src='./assets/scripts/header.js')
+  script(defer src='./assets/scripts/footer.js')
   script(defer src='./assets/scripts/home.js')
 block content
   section.head-screen.grid-16-8.border-top.border-right.border-bottom.border-left
     .grid-16.relative
-      .head-screen-block-1.relative.animation-1.border-right
-        .main-background-1
-        .logo-background
-          +svg('logo')
-        .building
-        .linear-gradient
-        .head-screen-title-wrapper
-          .head-screen-title.lisi Lisi
-          .head-screen-title.green Green
-          .head-screen-title.urban Urban
+      .green-block.border-right
+        .head-screen-block-1.relative.animation-1
+          .main-background-1
+          .logo-background
+            +svg('logo')
+          .building
+          .linear-gradient
+          .head-screen-title-wrapper
+            .head-screen-title.lisi Lisi
+            .head-screen-title.green Green
+            .head-screen-title.urban Urban
       .mouse-wrapper
         +svg('mouse')
     .grid-8.column
-      .head-screen-block-2.relative.animation-2.border-bottom
-        .main-background-2
-        .building
-      .head-screen-block-3.relative.animation-3
-        .main-background-3
-        .building
-        .head-screen-text-wrapper
-          a(href="tel:+995322552277").head-screen-text (+995) 32 255 22 77
-          a(href="mailto:SALES@UBANI.GE").head-screen-text.margin-bottom SALES@UBANI.GE
-          .head-screen-text.margin-bottom.text-width TBILISI, AVTO VARAZI STR. #42
-          a(href="#").head-screen-text instagram
-          a(href="#").head-screen-text facebook
-          a(href="#").head-screen-text youtube
+      .blue-block.border-bottom.h-50
+        .head-screen-block-2.animation-2.relative
+          .main-background-2
+          .building
+      .mint-block.h-50
+        .head-screen-block-3.relative.animation-3
+          .main-background-3
+          .building
+          .head-screen-text-wrapper
+            a(href="tel:+995322552277").head-screen-text (+995) 32 255 22 77
+            a(href="mailto:SALES@UBANI.GE").head-screen-text.margin-bottom SALES@UBANI.GE
+            .head-screen-text.margin-bottom.text-width TBILISI, AVTO VARAZI STR. #42
+            a(href="#").head-screen-text instagram
+            a(href="#").head-screen-text facebook
+            a(href="#").head-screen-text youtube
   section.advantages-screen.border-left.border-right.padding300-top
     .advantages-1.relative.border-top.border-right.border-bottom
       img(src="assets/images/advantages-screen/1.jpg")
@@ -134,20 +137,18 @@ block content
             .dark-text.location-screen-list-item-text-offset=i.text
   section.apartment-screen.border-right.border-left.border-bottom.grid-16-8
     .grid-16.border-right.apartment-screen-block.relative
-      img(src="assets/images/apartment/1.jpg")
+      img(src="assets/images/apartment/1.jpg").animation-img
       .apartment-screen-block-text
         .title Choose an apartment
         .right-text-wrapper
           .light-text This city will be a green example in which the emission of harmful gases will
-          +svg('arrow')
+          +svg('arrow').animation-arrow
     .grid-8.column
       img(src="assets/images/apartment/2.jpg").border-bottom
       img(src="assets/images/apartment/3.jpg")
-
-
 
 block footer
   include ../includes/footer.pug
 
 block header
-  //include ../includes/header.pug
+  include ../includes/header.pug

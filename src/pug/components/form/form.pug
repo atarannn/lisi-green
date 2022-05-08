@@ -1,12 +1,35 @@
-form(data-home-contact autocomplete="off")
-  .form-field.form-field-input(data-field-input data-field-name data-status="field--inactive")
-    input(type='text' name="name").form-field__input
-    .input-message(data-input-message) Ім’я:*
-  .form-field.disabled.form-field-input(data-field-input data-field-phone data-status="field--inactive")
-    input(type='text' name="phone").form-field__input
-    .input-message(data-input-message) Телефон:*
-  button( type="submit" data-btn-submit).home-content__link.link
-    span(data-btn-submit-text).link__text.usn Надіслати
-    span.link-ico.link-ico--margin
-      span.link-ico__stic.bgc--wc
+.form-wrap
+  form(data-form autocomplete="off")
+    .form-title Contact the manager
+    .form-field.form-field-input(data-field-input data-field-name data-status="field--inactive")
+      input(type='text' name="name" placeholder="Name:").form-field__input
+      .input-message(data-input-message) Name:
+    .form-field.form-field-input(data-field-input data-field-mail data-status="field--inactive")
+      input(type='text' name="mail" placeholder="email:").form-field__input
+      .input-message(data-input-message) email:
+    .form-field.form-field-input(data-field-input data-field-subject data-status="field--inactive")
+      input(type='text' name="subject" placeholder="Subject:").form-field__input
+      .input-message(data-input-message) Subject:
+    .form-textarea
+      textarea(rows="2" name="message" placeholder="message:")
+    button(type="submit" data-btn-submit).submit-btn
       +svg('arrow').link__ico.fill--wc
+      span(data-btn-submit-text).link__text.usn.light-text Send message
+    .menu-close(data-close-form)
+      .line-wrapper
+        span.first-line
+        span
+  .thanks-popup(data-thanks-popup)
+    +svg('form-arrow').thanks-popup-arrow
+    .title Thank you!
+    .thanks-popup-text Thank you for contacting us. Wait for a call from our managers. We wish you a pleasant day and good mood =)
+    a(href="index.html").arrow-back
+      +svg('arrow')
+      .light-text Back to the website
+    .menu-close(data-close-thanks-popup)
+      .line-wrapper
+        span.first-line
+        span
+    .thanks-popup-logo
+      img(src="assets/images/form-logo.svg")
+

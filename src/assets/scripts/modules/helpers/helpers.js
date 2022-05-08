@@ -14,10 +14,10 @@ export const eases = {
 };
 
 export const langDetect = () => {
-  if (window.location.pathname.match(/\/ru\//)) {
-    return 'ru';
-  } if (window.location.pathname.match(/\/en\//)) {
+  if (window.location.pathname.match(/\/en\//)) {
     return 'en';
+  } if (window.location.pathname.match(/\/ge\//)) {
+    return 'ge';
   }
-  return 'uk';
+  return 'en';
 };
