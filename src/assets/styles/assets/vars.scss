@@ -1,10 +1,22 @@
-$default-font: "gilroy", sans-serif;
+$default-font: "BPG", sans-serif;
 
 $wc: #fff;
 $bc: #000;
+$green: #5DBA51;
+$blue: #0CAECC;
+$mint: #00B09C;
 
 
 :root {
+  --header-footer-font: 24px;
+  --font16: 16px;
+  --font24: 24px;
+  --title-font: 120px;
 
+  --offset300: 300px;
+  --offset150: 150px;
+  --offset50: 50px;
+  --offset30: 30px;
+  --field: 98px;
 }
 

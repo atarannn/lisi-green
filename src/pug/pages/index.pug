@@ -12,21 +12,36 @@ block variable
         link: pagesLink[0].about
       }
     ]
-    var slider = [{
-      img: 'slider/1.jpg',
-      title: 'Власна резиденція у місті',
-      url: 'about',
-      linkText: 'Обрати квартиру',
+    var items = [{
+      num: '3.0',
+      text: 'British-Georgian Academy'
     },{
-      img: 'slider/1.jpg',
-      title: 'Власна резиденція у місті2',
-      url: 'about',
-      linkText: 'Обрати квартиру',
+      num: '4.8',
+      text: 'Goodwill'
     },{
-      img: 'slider/1.jpg',
-      title: 'Власна резиденція у місті3',
-      url: 'about',
-      linkText: 'Обрати квартиру',
+      num: '8.2',
+      text: 'Saakadze square'
+    }, {
+      num: '0.6',
+      text: 'Tkhinvali'
+    }, {
+      num: '2.0',
+      text: 'Mtsiknobartukhutsesi'
+    }, {
+      num: '2.9',
+      text: 'Lisi lake'
+    }, {
+      num: '5.4',
+      text: 'Metro Delisi'
+    }, {
+      num: '4.9',
+      text: '112'
+    }, {
+      num: '3.3',
+      text: 'Cafe Verde'
+    }, {
+      num: '2.3',
+      text: 'Hippodrome'
     }]
 
 block meta
@@ -42,10 +57,97 @@ block scripts
   script(defer src='./assets/scripts/header.js')
   script(defer src='./assets/scripts/home.js')
 block content
-  //- include ../includes/breadcrumbs.pug
+  section.head-screen.grid-16-8.border-top.border-right.border-bottom.border-left
+    .grid-16.relative
+      .head-screen-block-1.relative.animation-1.border-right
+        .main-background-1
+        .logo-background
+          +svg('logo')
+        .building
+        .linear-gradient
+        .head-screen-title-wrapper
+          .head-screen-title.lisi Lisi
+          .head-screen-title.green Green
+          .head-screen-title.urban Urban
+      .mouse-wrapper
+        +svg('mouse')
+    .grid-8.column
+      .head-screen-block-2.relative.animation-2.border-bottom
+        .main-background-2
+        .building
+      .head-screen-block-3.relative.animation-3
+        .main-background-3
+        .building
+        .head-screen-text-wrapper
+          a(href="tel:+995322552277").head-screen-text (+995) 32 255 22 77
+          a(href="mailto:SALES@UBANI.GE").head-screen-text.margin-bottom SALES@UBANI.GE
+          .head-screen-text.margin-bottom.text-width TBILISI, AVTO VARAZI STR. #42
+          a(href="#").head-screen-text instagram
+          a(href="#").head-screen-text facebook
+          a(href="#").head-screen-text youtube
+  section.advantages-screen.border-left.border-right.padding300-top
+    .advantages-1.relative.border-top.border-right.border-bottom
+      img(src="assets/images/advantages-screen/1.jpg")
+      .dark-text.top--first-text We care about the environment and in order to minimize its pollution solar power batteries have been installed here, which will give light in public spaces, entrances, parking and landscaped paths.
+    .advantages-title.relative
+      .title WHY DID YOU CHOOSE LISI GREEN URBAN?
+      .advantages-title-logo
+        img(src="assets/images/advantages-screen/logo.svg")
+    .advantages-2.relative.border-top.border-bottom.border-right
+      img(src="assets/images/advantages-screen/2.jpg")
+      .dark-text.bottom-text 92 Indoor parking
+    .advantages-3.relative.border-top.border-bottom
+      img(src="assets/images/advantages-screen/3.jpg")
+      .dark-text.bottom-text Event Room
+    .advantages-4.border-bottom.border-right.relative
+      img(src="assets/images/advantages-screen/4.jpg")
+      .dark-text.bottom-text.width-45 We promote a healthy lifestyle, that's why you can practice near home.
+    .advantages-5.relative.border-bottom
+      img(src="assets/images/advantages-screen/5.jpg")
+      .light-text.bottom-text Bicycle lane and Walking alley
+    .advantages-6.relative.border-bottom
+      img(src="assets/images/advantages-screen/6.jpg")
+      .light-text.bottom-text.width-40  Green yard (with squirrels, hedgehogs, rabbits on the territory)
+    .advantages-7.relative.border-bottom.border-right
+      img(src="assets/images/advantages-screen/7.jpg")
+      .light-text.bottom-text Different entrance
+    .advantages-8.relative.border-bottom
+      img(src="assets/images/advantages-screen/8.jpg")
+      .light-text.top-text Gazebo and Hammocks
+    .advantages-9.relative.border-bottom.border-left
+      img(src="assets/images/advantages-screen/9.jpg")
+      .light-text.bottom-text.width-60 Arranged Separate playground for children
+  section.location-screen.border-left.border-right.border-bottom.padding300-top.padding300-bottom
+    .grid-10-12.location-screen-head
+      .grid-10
+        .title European District
+      .grid-12
+        .dark-text Leaders of the capital city of the United Arab Emirates Abu Dhabi planned to develop the world’s first carbon free city within next 10 years. This city will be a green example in which the emission of harmful gases will be maximized and the fuel consumption will be minimized.
+    .grid-10-12
+      .grid-10
+        img(src="assets/images/video.jpg" alt="video")
+      ul.grid-12.location-screen-list
+        each i in items
+          .location-screen-list-item
+            .title.location-screen-list-item-num-offset= i.num
+            .dark-text km
+            .dark-text.location-screen-list-item-text-offset=i.text
+  section.apartment-screen.border-right.border-left.border-bottom.grid-16-8
+    .grid-16.border-right.apartment-screen-block.relative
+      img(src="assets/images/apartment/1.jpg")
+      .apartment-screen-block-text
+        .title Choose an apartment
+        .right-text-wrapper
+          .light-text This city will be a green example in which the emission of harmful gases will
+          +svg('arrow')
+    .grid-8.column
+      img(src="assets/images/apartment/2.jpg").border-bottom
+      img(src="assets/images/apartment/3.jpg")
+
+
 
 block footer
   include ../includes/footer.pug
 
 block header
-  include ../includes/header.pug
+  //include ../includes/header.pug

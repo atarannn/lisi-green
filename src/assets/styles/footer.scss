@@ -1,0 +1,79 @@
+footer {
+  background-color: $blue;
+  position: relative;
+  .footer-logo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    height: 613px;
+    width: 923px;
+  }
+}
+.footer {
+  padding-top: var(--offset150);
+  padding-bottom: 90px;
+  display: grid;
+  grid-template-columns: repeat(23, 1fr) var(--field);
+  grid-template-rows: 1fr;
+  grid-auto-columns: 1fr;
+  gap: 0 0;
+  grid-auto-flow: row;
+  grid-template-areas:
+          "footer-menu footer-menu footer-menu footer-menu footer-menu footer-menu footer-menu footer-menu footer-menu footer-menu footer-menu footer-menu footer-links footer-links footer-links footer-links footer-links footer-links footer-links footer-links footer-links pageup pageup .";
+  &-menu {
+    z-index: 1;
+    grid-area: footer-menu;
+  }
+  &-links {
+    z-index: 1;
+    grid-area: footer-links;
+    li {
+      margin-bottom: 20px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .pageup {
+    z-index: 1;
+    grid-area: pageup;
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+    justify-self: flex-end;
+    position: relative;
+    @include from(1024px) {
+      cursor: pointer;
+    }
+  }
+}
+
+.footer-bottom {
+  display: grid;
+  grid-template-columns: repeat(23, 1fr) var(--field);
+  grid-template-rows: 1fr;
+  grid-auto-columns: 1fr;
+  gap: 0 0;
+  grid-auto-flow: row;
+  grid-template-areas:
+          ". . . . . . . . . . . . footer-bottom-text footer-bottom-text footer-bottom-text footer-bottom-text footer-bottom-text footer-bottom-text footer-bottom-text footer-bottom-text footer-bottom-text smarto smarto .";
+  &-text {
+    z-index: 1;
+    grid-area: footer-bottom-text;
+    font-family: 'BPG';
+    font-size: var(--font16);
+    font-weight: 400;
+    line-height: 140%;
+    color: $bc;
+    text-transform: uppercase;
+    text-align: left;
+    align-self: start;
+  }
+  .smarto {
+    z-index: 1;
+    grid-area: smarto;
+    height: 87px;
+    width: 80px;
+  }
+}
