@@ -1,20 +1,21 @@
 -
   var menu = [
-    ['HOME', '#'],
-    ['APARTMENTs', '#'],
-    ['Concept', '#'],
-    ['Gallery', '#'],
-    ['Infrastructure', '#'],
-    ['Payment', '#'],
-    ['Developer', '#'],
-    ['Contact', '#'],
+    ['HOME', '#', 'HOME'],
+    ['APARTMENTS', '#', 'APARTMENTS'],
+    ['Concept', '#', 'Concept'],
+    ['Gallery', '#', 'Gallery'],
+    ['Infrastructure', '#', 'Infrastructure'],
+    ['Payment', '#', 'Payment'],
+    ['Developer', '#', 'Developer'],
+    ['Contact', '#', 'Contact'],
   ]
 .menu-wrap(data-menu data-disable-page-scroll).border-bottom.border-left.border-right.border-top.grid-16-8.relative
   .grid-16.relative.menu-wrap-nav.border-right
     ul
       each el in menu
         li(data-animation)
-          a(href=el[1]).title=el[0]
+          a(href=el[1] data-text=el[2]).title.cubic-hover
+            span=el[0]
     .menu-wrap-nav-logo
       img(src="assets/images/footer-logo.svg")
   .grid-8.menu-wrap-right.column
@@ -23,20 +24,18 @@
     .menu-wrap-right-contacts.h-50.relative
       ul
         li
-          a(href="tel:+995322552277").header-text (+995) 32 255 22 77
+          a(href="tel:+995322552277").header-text.white-underline-hover (+995) 32 255 22 77
         li
-          a(href="mailto:SALES@UBANI.GE").header-text SALES@UBANI.GE
+          a(href="mailto:SALES@UBANI.GE").header-text.white-underline-hover SALES@UBANI.GE
         li
           .header-text TBILISI, AVTO ARAZI STR. #42
         li
-          a(href="#").header-text instagram
+          a(href="#").header-text.white-underline-hover instagram
         li
-          a(href="#").header-text facebook
+          a(href="#").header-text.white-underline-hover facebook
         li
-          a(href="#").header-text youtube
-  .menu-close(data-close-menu)
+          a(href="#").header-text.white-underline-hover youtube
+  .menu-close(data-close-menu).circle-animation
     .line-wrapper
       span.first-line
       span
-
-

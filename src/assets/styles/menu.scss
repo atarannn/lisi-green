@@ -59,7 +59,7 @@
   height: 80px;
   width: 80px;
   border-radius: 100%;
-  background-color: $bc;
+  background-color: $green;
   @include from(1024px) {
     cursor: pointer;
   }

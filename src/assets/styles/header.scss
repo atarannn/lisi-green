@@ -16,7 +16,12 @@
   &.not-on-top {
     background: #00B09CCC;
     padding: 5px 0;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    .header-left-logo img {
+      height: var(--logo-h2);
+      width: var(--logo-w2);
+      transition: all 0.2s ease-in-out;
+    }
   }
   &-left {
     grid-area: header-left;
@@ -28,6 +33,7 @@
       img {
         height: var(--logo-h);
         width: var(--logo-w);
+        transition: all 0.2s ease-in-out;
       }
     }
     &-lang {
@@ -52,7 +58,7 @@
       height: 80px;
       width: 80px;
       border-radius: 100%;
-      background-color: $bc;
+      background-color: $green;
       position: relative;
       @include from(1024px) {
         cursor: pointer;

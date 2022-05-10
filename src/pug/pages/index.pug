@@ -56,6 +56,7 @@ block scripts
   script(defer src='./assets/scripts/header.js')
   script(defer src='./assets/scripts/footer.js')
   script(defer src='./assets/scripts/home.js')
+  script(defer src='./assets/scripts/text-animation.js')
 block content
   section.head-screen.grid-16-8.border-top.border-right.border-bottom.border-left
     .grid-16.relative
@@ -82,12 +83,12 @@ block content
           .main-background-3
           .building
           .head-screen-text-wrapper
-            a(href="tel:+995322552277").head-screen-text (+995) 32 255 22 77
-            a(href="mailto:SALES@UBANI.GE").head-screen-text.margin-bottom SALES@UBANI.GE
+            a(href="tel:+995322552277").head-screen-text.white-underline-hover (+995) 32 255 22 77
+            a(href="mailto:SALES@UBANI.GE").head-screen-text.margin-bottom.white-underline-hover SALES@UBANI.GE
             .head-screen-text.margin-bottom.text-width TBILISI, AVTO VARAZI STR. #42
-            a(href="#").head-screen-text instagram
-            a(href="#").head-screen-text facebook
-            a(href="#").head-screen-text youtube
+            a(href="#").head-screen-text.white-underline-hover instagram
+            a(href="#").head-screen-text.white-underline-hover facebook
+            a(href="#").head-screen-text.white-underline-hover youtube
   section.advantages-screen.border-left.border-right.padding300-top
     .advantages-1.relative.border-top.border-right.border-bottom
       img(src="assets/images/advantages-screen/1.jpg")
@@ -126,12 +127,12 @@ block content
         .title European District
       .grid-12
         .dark-text Leaders of the capital city of the United Arab Emirates Abu Dhabi planned to develop the world’s first carbon free city within next 10 years. This city will be a green example in which the emission of harmful gases will be maximized and the fuel consumption will be minimized.
-    .grid-10-12
-      .grid-10
+    .grid-10-12.relative
+      .grid-10.fixed-img
         img(src="assets/images/video.jpg" alt="video")
       ul.grid-12.location-screen-list
         each i in items
-          .location-screen-list-item
+          li.location-screen-list-item
             .title.location-screen-list-item-num-offset= i.num
             .dark-text km
             .dark-text.location-screen-list-item-text-offset=i.text
@@ -142,7 +143,8 @@ block content
         .title Choose an apartment
         .right-text-wrapper
           .light-text This city will be a green example in which the emission of harmful gases will
-          +svg('arrow').animation-arrow
+          a(href="#").animation-arrow
+            +svg('arrow')
     .grid-8.column
       img(src="assets/images/apartment/2.jpg").border-bottom
       img(src="assets/images/apartment/3.jpg")

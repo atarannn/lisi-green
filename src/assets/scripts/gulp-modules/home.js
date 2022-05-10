@@ -24,16 +24,17 @@ function init() {
         hoverTrigger3.addEventListener('mouseout', () => {
             contentForAnimation3.classList.add('animation-3');
         });
-        const hoverTrigger4 = document.querySelector('.animation-arrow');
+        const hoverTrigger4 = document.querySelector('.apartment-screen-block');
         const contentForAnimation4 = document.querySelector('.animation-img');
+        const arrow = document.querySelector('.animation-arrow');
         hoverTrigger4.addEventListener('mouseover', () => {
-            hoverTrigger4.style.transform = 'rotate(-45deg)';
-            hoverTrigger4.style.transition = 'transform .3s ease-in-out';
+            arrow.style.transform = 'rotate(-45deg)';
+            arrow.style.transition = 'transform .3s ease-in-out';
             contentForAnimation4.style.transform = 'scale(1.2)';
             contentForAnimation4.style.transition = 'transform .4s ease-in-out';
         });
         hoverTrigger4.addEventListener('mouseout', () => {
-            hoverTrigger4.style.transform = 'rotate(0deg)';
+            arrow.style.transform = 'rotate(0deg)';
             contentForAnimation4.style.transform = 'scale(1)';
         });
     }

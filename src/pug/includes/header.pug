@@ -6,9 +6,11 @@ header.header
             img(src="assets/images/lisi-green-urban.svg")
         ul.header-left-lang
             li
-                a(href="#").header-text GEO
+                a(href="#" data-text="GEO").header-text.cubic-hover
+                    span GEO
             li
-                a(href="#").header-text ENG
+                a(href="#" data-text="ENG").header-text.cubic-hover
+                    span ENG
         a(href="#").header-3d
             +svg('arrow')
             .column
@@ -20,7 +22,7 @@ header.header
             .column
                 .header-text Choose an
                 .header-text apartment
-        .header-right-close(data-open-menu)
+        .header-right-close(data-open-menu).circle-animation
             .line-wrapper
                 span.first-line
                 span

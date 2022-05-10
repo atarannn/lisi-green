@@ -56,3 +56,26 @@ $screen-height: 720;
 @function lh($lh, $fz) {
 	@return #{($lh/$fz)}em
 }
+
+@mixin link-hover2 ($color: $bc) {
+	@include from(1024px) {
+		position: relative;
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 0;
+			height: 0;
+			border-top: 1px solid;
+			border-top-color: $color;
+			transition: width 0.1s linear;
+		}
+		&:hover {
+			cursor: pointer;
+			&:after {
+				width: 100%;
+			}
+		}
+	}
+}

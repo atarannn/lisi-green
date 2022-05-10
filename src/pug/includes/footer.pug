@@ -2,34 +2,41 @@ footer.border-right.border-left.border-bottom
     .footer
         ul.footer-menu
             li
-                a(href="#").title HOME
+                a(href="#" data-text="HOME").title.cubic-hover
+                    span HOME
             li
-                a(href="#").title APARTMENTs
+                a(href="#" data-text="APARTMENTs").title.cubic-hover
+                    span APARTMENTs
             li
-                a(href="#").title Concept
+                a(href="#" data-text="Concept").title.cubic-hover
+                    span Concept
             li
-                a(href="#").title GALLERY
+                a(href="#" data-text="GALLERY").title.cubic-hover
+                    span GALLERY
             li
-                a(href="#").title developer
+                a(href="#" data-text="developer").title.cubic-hover
+                    span developer
             li
-                a(href="#").title Contact
+                a(href="#" data-text="Contact").title.cubic-hover
+                    span Contact
         ul.footer-links
             li
-                a(href="tel:+995322552277").footer-text (+995) 32 255 22 77
+                a(href="tel:+995322552277").footer-text.black-underline-hover (+995) 32 255 22 77
             li
-                a(href="mailto:SALES@UBANI.GE").footer-text SALES@UBANI.GE
+                a(href="mailto:SALES@UBANI.GE").footer-text.black-underline-hover SALES@UBANI.GE
             li
                 .footer-text TBILISI, AVTO ARAZI STR. #42
             li
-                a(href="#").footer-text instagram
+                a(href="#").footer-text.black-underline-hover instagram
             li
-                a(href="#").footer-text facebook
+                a(href="#").footer-text.black-underline-hover facebook
             li
-                a(href="#").footer-text youtube
-        +svg('footer-arrow').pageup
+                a(href="#").footer-text.black-underline-hover youtube
+        .pageup.circle-animation
+            +svg('footer-arrow')
     .footer-bottom
         .footer-bottom-text © 2022 LISI GREEN URBAN.
-        .smarto
+        a(href="#").smarto
             img(src="assets/images/smarto-logo.svg")
     .footer-logo
         img(src="assets/images/footer-logo.svg")
