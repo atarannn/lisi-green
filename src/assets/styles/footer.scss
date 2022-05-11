@@ -41,15 +41,15 @@ footer {
   .pageup {
     z-index: 1;
     grid-area: pageup;
-    height: 80px;
-    width: 80px;
+    height: var(--btn);
+    width: var(--btn);
     border-radius: 100%;
     justify-self: flex-end;
     position: relative;
     background: $green;
     svg {
-      height: 80px;
-      width: 80px;
+      height: var(--btn);
+      width: var(--btn);
       position: absolute;
       left: 50%;
       top: 50%;
@@ -90,7 +90,7 @@ footer {
     z-index: 1;
     grid-area: smarto;
     height: 87px;
-    width: 80px;
+    width: var(--btn);
   }
 }
 

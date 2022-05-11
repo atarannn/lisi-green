@@ -55,8 +55,8 @@
     justify-content: space-between;
     padding-left: 88px;
     &-close {
-      height: 80px;
-      width: 80px;
+      height: var(--btn);
+      width: var(--btn);
       border-radius: 100%;
       background-color: $green;
       position: relative;

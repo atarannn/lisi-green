@@ -56,8 +56,8 @@
   position: absolute;
   right: var(--field);
   top: 79px;
-  height: 80px;
-  width: 80px;
+  height: var(--btn);
+  width: var(--btn);
   border-radius: 100%;
   background-color: $green;
   @include from(1024px) {

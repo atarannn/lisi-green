@@ -14,6 +14,9 @@ global.axios = axios;
 const form = [
   '[data-form]',
 ];
+const formContacts = [
+    '[data-contacts]',
+]
 form.forEach((form) => {
   const $form = document.querySelector(form);
   if ($form) {
@@ -39,6 +42,62 @@ form.forEach((form) => {
             });
           }
           thanksPopup('[data-btn-submit]','[data-thanks-popup]', '[data-close-thanks-popup]');
+          },
+        $btnSubmit: $form.querySelector('[data-btn-submit]'),
+        fields: {
+          name: {
+            inputWrapper: new SexyInput({
+              animation: 'none',
+              $field: $form.querySelector('[data-field-name]'),
+            }),
+            rule: yup
+                .string()
+                .required(i18next.t('required'))
+                .matches(/^[aA-zZ\s]+$/, i18next.t('only_letters'))
+                .trim(),
+            defaultMessage: i18next.t('name'),
+            valid: false,
+            error: [],
+          },
+          mail: {
+            inputWrapper: new SexyInput({
+              animation: 'none',
+              $field: $form.querySelector('[data-field-mail]'),
+            }),
+            rule: yup
+                .string()
+                .required(i18next.t('required'))
+                .trim(),
+            defaultMessage: i18next.t('mail'),
+            valid: false,
+            error: [],
+          },
+          subject: {
+            inputWrapper: new SexyInput({
+              animation: 'none',
+              $field: $form.querySelector('[data-field-subject]'),
+            }),
+            rule: yup
+                .string()
+                .required(i18next.t('required'))
+                .trim(),
+            defaultMessage: i18next.t('subject'),
+            valid: false,
+            error: [],
+          },
+        },
+      },
+    });
+  }
+});
+formContacts.forEach((form) => {
+  const $form = document.querySelector(form);
+  if ($form) {
+    new FormMonster({
+      elements: {
+        $form,
+        showSuccessMessage: false,
+        successAction: () => {
           },
         $btnSubmit: $form.querySelector('[data-btn-submit]'),
         fields: {
