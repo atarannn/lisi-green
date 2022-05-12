@@ -96,7 +96,7 @@ section {
     font-family: 'BPG';
     font-size: 300px;
     font-weight: 400;
-    line-height: 71%;
+    line-height: 76%;
     color: $wc;
     text-transform: uppercase;
   }
@@ -225,7 +225,7 @@ section {
       fill: transparent;
       height: 40px;
       width: 25px;
-      animation: 3s cubic-bezier(0.46, 0.03, 0.52, 0.96) 0s infinite mousemove;
+      animation: 2s cubic-bezier(0.46, 0.03, 0.52, 0.96) 0s infinite mousemove;
     }
   }
 }
@@ -250,6 +250,7 @@ section {
     grid-area: adv-title;
     align-self: start;
     height: 100%;
+    z-index: 1;
     .title {
       text-align: right;
       width: 80%;
@@ -268,6 +269,9 @@ section {
         width: 100%;
       }
     }
+  }
+  .advantages-1, .advantages-2, .advantages-3, .advantages-4, .advantages-5, .advantages-6, .advantages-7, .advantages-8, .advantages-9 {
+    z-index: 2;
   }
   .advantages-1 {
     grid-area: adv-1;
@@ -327,12 +331,12 @@ section {
 }
 .location-screen {
   background-color: $green;
-  .fixed-img {
-    position: sticky;
-    top: 150px;
-  }
   &-head {
     margin-bottom: var(--offset50);
+  }
+  iframe {
+    width: 97%;
+    height: 490px;
   }
   .location-screen-list {
     display: flex;

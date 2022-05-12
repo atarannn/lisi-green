@@ -1,0 +1,67 @@
+#id-page-404 {
+  .header {
+    background: #00B09CCC;
+    padding: 10px 0;
+    border-top: 3px solid $wc;
+    border-left: 3px solid $wc;
+    border-right: 3px solid $wc;
+    .header-left-logo img {
+      height: var(--logo-h2);
+      width: var(--logo-w2);
+    }
+  }
+}
+.page404-wrap {
+  height: 100vh;
+  width: 100%;
+  &-dog {
+    position: absolute;
+    left: var(--field);
+    bottom: 0;
+    z-index: 1;
+    height: 793px;
+    width: auto;
+  }
+  .grid-8 {
+    height: 100%;
+    width: 100%;
+    background: $green;
+  }
+  .grid-16 {
+    height: 100%;
+    width: 100%;
+    background: $blue;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .page404 {
+    &-logo {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+      height: 613px;
+      width: 923px;
+    }
+    &-text {
+      z-index: 2;
+      margin-left: 250px;
+      .head-screen-title {
+        margin-bottom: var(--offset50);
+      }
+      .concept-text {
+        margin: 10px 0 var(--offset50);
+      }
+      .link-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        .header-3d {
+          margin-right: 60px;
+        }
+      }
+    }
+  }
+}

@@ -10,7 +10,7 @@ function homeAnimationAdditional() {
                 .timeline({
                     paused: true,
                     scrollTrigger: {
-                        scroller: $scroller ? $scroller : null,
+                        scroller: document.body,
                         trigger: text,
                         once: true,
                     },
@@ -22,7 +22,7 @@ function homeAnimationAdditional() {
                 );
         });
     }
-    splitToLinesAndFadeUp('.advantages-screen .title, .apartment-screen-block-text .title, .location-screen-head .title, .location-screen-head .dark-text, .right-text-wrapper .light-text');
+    splitToLinesAndFadeUp('.advantages-screen .title, .apartment-screen-block-text .title, .location-screen-head .title, .location-screen-head .dark-text, .right-text-wrapper .light-text, .first-screen-text .title, .concept-screen .dark-text, .concept-screen .title, .concept-screen .white-text64, .concept-screen .color-text64, #id-page-concept .concept-text, #id-page-payment .concept-text, .developer-screen-1 .grid-12-left .dark-text, .developer-screen-2 .light-text, .developer-screen-3 .light-text');
 
     function splitToLinesAndFadeUp2(selector, $scroller) {
         document.querySelectorAll(selector).forEach(text => {
@@ -35,7 +35,7 @@ function homeAnimationAdditional() {
                 .timeline({
                     paused: true,
                     scrollTrigger: {
-                        scroller: $scroller ? $scroller : null,
+                        scroller: document.body,
                         trigger: text,
                         once: true,
                     },
@@ -49,16 +49,17 @@ function homeAnimationAdditional() {
     }
     splitToLinesAndFadeUp2('.advantages-screen .dark-text, .advantages-screen .light-text');
 
-    const blockAnim = document.querySelectorAll('.head-screen-text-wrapper');
+    const blockAnim = document.querySelectorAll('.head-screen-text-wrapper, .contacts-right-info');
     blockAnim.forEach(section => {
         gsap.set(section, { overflow: 'visible' });
         const tl = gsap.timeline({
             paused: true,
             scrollTrigger: {
+                scroller: document.body,
                 triggerHook: 1,
                 trigger: section,
-                start: '0% bottom',
-                end: '100% bottom',
+                // start: '0% bottom',
+                // end: '100% bottom',
                 once: true,
             },
         });
@@ -69,7 +70,7 @@ function homeAnimationAdditional() {
         );
     });
 
-    const titleAnim = document.querySelectorAll('.head-screen-title');
+    const titleAnim = document.querySelectorAll('.head-screen-title, .contacts-row, .page404-text');
     titleAnim.forEach(section => {
         gsap.set(section, { overflow: 'visible' });
         const tl = gsap.timeline({
@@ -77,6 +78,7 @@ function homeAnimationAdditional() {
             scrollTrigger: {
                 triggerHook: 1,
                 // trigger: section,
+                // scroller: document.body,
                 start: '-100% bottom',
                 end: '0% bottom',
                 once: true,

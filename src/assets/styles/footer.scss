@@ -1,6 +1,7 @@
 footer {
   background-color: $blue;
   position: relative;
+  overflow: hidden;
   .footer-logo {
     position: absolute;
     right: 0;
@@ -32,7 +33,7 @@ footer {
     flex-direction: column;
     align-items: flex-start;
     li {
-      margin-bottom: 20px;
+      margin-bottom: var(--offset20);
       &:last-child {
         margin-bottom: 0;
       }

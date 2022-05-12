@@ -15,8 +15,11 @@
     ". header-left header-left header-left header-left header-left header-left header-left header-left header-left header-left header-left header-left header-left header-left header-left header-right header-right header-right header-right header-right header-right header-right .";
   &.not-on-top {
     background: #00B09CCC;
-    padding: 5px 0;
+    padding: 10px 0;
     transition: all 0.2s ease-in-out;
+    border-top: 3px solid $wc;
+    border-left: 3px solid $wc;
+    border-right: 3px solid $wc;
     .header-left-logo img {
       height: var(--logo-h2);
       width: var(--logo-w2);
@@ -98,24 +101,24 @@
       }
     }
   }
-  &-3d {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    svg {
-      height: 40px;
-      width: 40px;
-      transition: transform .3s ease-in-out;
-    }
-    .column {
-      margin-left: 20px;
-    }
-    @include from(1024px) {
-      &:hover {
-        svg {
-          transform: rotate(-45deg);
-          transition: transform .3s ease-in-out;
-        }
+}
+.header-3d {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  svg {
+    height: 40px;
+    width: 40px;
+    transition: transform .3s ease-in-out;
+  }
+  .column {
+    margin-left: var(--offset20);
+  }
+  @include from(1024px) {
+    &:hover {
+      svg {
+        transform: rotate(-45deg);
+        transition: transform .3s ease-in-out;
       }
     }
   }

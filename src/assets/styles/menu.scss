@@ -43,7 +43,7 @@
         left: 82px;
         top: 70px;
         li {
-          margin-top: 20px;
+          margin-top: var(--offset20);
           &:first-child {
             margin-top: 0;
           }
