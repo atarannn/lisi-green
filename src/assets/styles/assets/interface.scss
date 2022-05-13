@@ -161,7 +161,13 @@
 }
 
 .first-screen {
-	height: auto;
+	height: 100%;
+	.grid-16 {
+		img {
+			height: 100%;
+			object-fit: cover;
+		}
+	}
 	&-text {
 		position: absolute;
 		top: 271px;
