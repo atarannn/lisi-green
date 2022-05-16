@@ -1,0 +1,72 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'concept'
+    var id_page = 'id-page-concept'
+    var class_page = 'class-page-concept'
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/header.js')
+  script(defer src='./assets/scripts/footer.js')
+  script(defer src='./assets/scripts/text-animation.js')
+  script(defer src='./assets/scripts/parallax-animation.js')
+block content
+  .first-screen.border-top.border-right.border-bottom.border-left.grid-16-8
+    .grid-16.border-right.relative
+      img(src="assets/images/concept/1.jpg" alt="img")
+      .first-screen-text
+        .title= title_page
+    .grid-8.first-screen-right
+      .first-screen-right-logo
+        img(src="assets/images/first-screen-logo.svg" alt="svg")
+  .concept-screen
+    .concept-screen-1.border-right.border-left.border-bottom.grid-12-12
+      .grid-8
+        .dark-text In the green district it is planned the development of energy efficient, low-rise buildings of European standards with recreational islands, gardens, walking and bike lanes, alleys. The first phase of the project envisages the construction of 4-6 storey residential building for105 apartments.
+      .grid-11
+        .title Why should you make a choice of Lisi Green Urban?
+    .concept-screen-2.border-right.border-left.border-bottom.grid-8-16
+      .grid-8.border-right.concept-text-wrapper
+        .white-text64 Price
+        .concept-text Our goal is to make utmost available such novelty and new urban life style for the customers. Therefore, prices are competitive- $ 500 for 1m2. Location is one of the most important factors for the most customers that is why our company chose the best place for those who want to live in a peaceful and quiet environment and at the same time to maintain proximity to the city center.
+      .grid-16
+        img(src="assets/images/concept/2.jpg" alt="img")
+    .concept-screen-3.border-right.border-left.border-bottom.grid-12-12
+      .grid-12-left.border-right
+        img(src="assets/images/concept/3.jpg" alt="img")
+      .grid-12-right.concept-text-wrapper
+        .white-text64 Ecology
+        .concept-text Location has been selected with consideration of air pollution level and it was selected such a place where air is most fresh. It is known that Tbilisi is “ventilated” from the west and accordingly there is always clean, purified air here. Unfortunately, it is hard to find a place in Tbilisi, that we may define as environmentally friendly, which has a positive effect on your health. Air pollution causes more and more danger to the population from year to year, it is precisely for these reasons that we have chosen green space, where the most eco-friendly environment takes care on your health. We care about the environment and in order to minimize its pollution solar power batteries have been installed here, which will give light in public spaces, entrances, parking and landscaped paths.
+    .concept-screen-4.border-right.border-left.border-bottom.grid-8-16
+      .grid-8.border-right.concept-text-wrapper
+        .white-text64 Quality
+        .concept-text We used the latest technologies in the construction of the complex, both for foundation and “structure” as well as for interior – noise isolation, heating and cooling systems. It is your reasonable investment in future reliable and high-tech facility, which will withstand the test of time.
+      .grid-16
+        img(src="assets/images/concept/4.jpg" alt="img")
+    .concept-screen-5.border-right.border-left.border-bottom.grid-12-12
+      .grid-12-left.border-right
+        img(src="assets/images/concept/5.jpg" alt="img")
+      .grid-12-right.concept-text-wrapper
+        .white-text64 Infrastructure
+        .concept-text During the project planning, we pay a great attention to the necessity of well-functioning infrastructure. All you need is located in 5-10- distance from our complex – market, pharmacy etc.
+    .concept-screen-6.border-right.border-left.border-bottom.grid-8-16
+      .grid-8.border-right.concept-text-wrapper
+        .white-text64 Amenities
+        .concept-text Complex has low-rise buildings (5 floors) and is located on a naturally green slope. All entrances will have 50-m2common hall where a public space will be arranged. Every apartment will have individual storeroom. Among the perennial plants, it is planned to arrange the recreational spaces, which will give more comfort to our green areas. Arrangement of the bike lane is also planned, which will be connected to the Lisi Lake bike lane.
+      .grid-16
+        img(src="assets/images/concept/6.jpg" alt="img")
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

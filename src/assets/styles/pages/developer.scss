@@ -1,0 +1,37 @@
+.developer-screen-1 {
+  background-color: $green;
+  padding-top: var(--offset50);
+  padding-bottom: var(--offset150);
+  padding-left: var(--field);
+  padding-right: var(--field);
+  .grid-12-left {
+    padding-right: 177px;
+  }
+  &-list {
+    &-item {
+      margin-top: 40px;
+      padding-bottom: var(--offset20);
+      border-bottom: 1px solid $bc;
+      .dark-text {
+        margin-top: var(--offset20);
+      }
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}
+.developer-screen-2 {
+  background-color: $blue;
+}
+.developer-screen-3 {
+  background-color: $mint;
+}
+
+.developer-screen-2, .developer-screen-3 {
+  .light-text {
+    &:first-child {
+      margin-bottom: 40px;
+    }
+  }
+}

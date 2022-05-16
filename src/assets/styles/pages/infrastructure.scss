@@ -1,0 +1,69 @@
+.map {
+  width: 100%;
+  position: relative;
+  .infastructure-markers__wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    &.closed {
+      pointer-events: none;
+    }
+    &.closed>* {
+      pointer-events: all;
+    }
+    overflow: hidden;
+    .infrastructure-markers__ul {
+      height: 100%;
+      img {
+        width: 40px;
+        height: 40px;
+      }
+      .light-text {
+        margin-left: 30px;
+      }
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        background-color: $mint;
+        height: 80px;
+        width: 437px;
+        padding-left: 40px;
+        cursor: pointer;
+        margin-top: 3px;
+        transition: background-color .2s linear;
+        &:first-child {
+          margin-top: 3px;
+        }
+        &.active {
+          background-color: $blue;
+          transition: background-color .2s linear;
+        }
+        @include from(1024px) {
+          &:hover {
+            background-color: $blue;
+            transition: background-color .2s linear;
+          }
+        }
+      }
+    }
+
+    .infrastructure-markers__btn {
+      background-color: $blue;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 50px;
+      width: 50px;
+      cursor: pointer;
+      .rotate {
+        transform: rotate(180deg);
+        transition: transform .2s linear;
+      }
+    }
+  }
+}
+#map {
+  width: 100%;
+  height: 900px;
+}

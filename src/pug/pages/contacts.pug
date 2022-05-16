@@ -1,0 +1,76 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'contacts'
+    var id_page = 'id-page-contacts'
+    var class_page = 'class-page-contacts'
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/header.js')
+  script(defer src='./assets/scripts/footer.js')
+  script(defer src='./assets/scripts/contacts.js')
+  script(defer src='./assets/scripts/text-animation.js')
+  script(defer src='./assets/scripts/parallax-animation.js')
+block content
+  .first-screen.border-top.border-right.border-bottom.border-left.grid-16-8
+    .grid-16.border-right.relative
+      img(src="assets/images/contacts/1.jpg" alt="img")
+      .first-screen-text
+        .title= title_page
+        .contacts-row
+          +svg('phone')
+          a(href="tel:+995322552277").white-text36.white-underline-hover (+995) 32 255 22 77
+        .contacts-row
+          +svg('mail')
+          a(href="mailto:SALES@UBANI.GE").white-text36.white-underline-hover SALES@UBANI.GE
+    .grid-8.first-screen-right
+      .contacts-right-info.column
+        a(href="#").light-text.white-underline-hover instagram
+        a(href="#").light-text.white-underline-hover facebook
+        a(href="#").light-text.white-underline-hover youtube
+      .first-screen-right-logo
+            img(src="assets/images/first-screen-logo.svg" alt="svg")
+  .contacts-screen.grid-8-16.border-right.border-left.border-bottom.relative
+    .grid-8-8-16
+      .map-head-wrapper
+        .map-head-marker
+          img(src="assets/images/contacts/map-head-marker.svg" alt="svg")
+        .map-head-text
+          .white-text36 Tbilisi, Avto Varazi str. #42
+    .grid-8.border-right
+      form(data-contacts autocomplete="off")
+        .form-title Keep in touch
+        .form-field.form-field-input(data-field-input data-field-name data-status="field--inactive")
+          input(type='text' name="name" placeholder="Name:").form-field__input
+          .input-message(data-input-message) Name:
+        .form-field.form-field-input(data-field-input data-field-mail data-status="field--inactive")
+          input(type='text' name="mail" placeholder="email:").form-field__input
+          .input-message(data-input-message) email:
+        .form-field.form-field-input(data-field-input data-field-subject data-status="field--inactive")
+          input(type='text' name="subject" placeholder="Subject:").form-field__input
+          .input-message(data-input-message) Subject:
+        .form-textarea
+          textarea(rows="2" name="message" placeholder="message:")
+        button(type="submit" data-btn-submit).submit-btn
+          +svg('arrow').link__ico.fill--wc
+          span(data-btn-submit-text).link__text.usn.light-text Send message
+    .grid-16
+      .map(width="960px" height="540px")
+        #map(width="960px" height="540px")
+
+
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

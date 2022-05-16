@@ -1,0 +1,95 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'developer'
+    var id_page = 'id-page-developer'
+    var class_page = 'class-page-developer'
+    var breadcrumbsSubitem = [
+      {
+        label: 'Developer',
+        link: pagesLink[0].developer
+      }
+    ]
+    var items = [{
+      title: '#2 Sh. Dadiani St. Tbilisi',
+      text: 'office building, redemption, reconstruction;'
+    }, {
+      title: '#154 Agmashenebeli avenue, Tbilisi',
+      text: 'trade center “Danish House” development;'
+    }, {
+      title: '#154 Agmashenebeli avenue, Tbilisi',
+      text: '“Green Office” office center development and management;'
+    }, {
+      title: '#83 Javakhishvili St., Tbilisi ',
+      text: 'Residential Building construction and development;'
+    }, {
+      title: 'Kobuleti',
+      text: 'Multistory residential complex “Kobuleti Pichvnari” construction and development;'
+    }, {
+      title: 'Tbilisi - #14 Vazisubani St.',
+      text: 'co-financing and development;'
+    }, {
+      title: 'Tbilisi – Pikris Gora, #9 S. Chiaureli St.',
+      text: 'Residential Building co-financing and development;'
+    }, {
+      title: 'Tbilisi, Vavtlugi 7,000 m2',
+      text: 'warehouse redemption and development'
+    }, {
+      title: 'Bakuriani',
+      text: 'Creation of Hotel complex development concept and co-investment'
+    }, {
+      title: 'Residential complex “Green Village”',
+      text: 'development of the Town house type settlement nearby the Lisi Lake.'
+    }]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/header.js')
+  script(defer src='./assets/scripts/footer.js')
+  script(defer src='./assets/scripts/text-animation.js')
+  script(defer src='./assets/scripts/parallax-animation.js')
+block content
+  .first-screen.border-top.border-right.border-bottom.border-left.grid-16-8
+    .grid-16.border-right.relative
+      img(src="assets/images/developer/1.jpg" alt="img")
+      .first-screen-text
+        .title= title_page
+    .grid-8.first-screen-right
+      .first-screen-right-logo
+        img(src="assets/images/first-screen-logo.svg" alt="svg")
+  .developer-screen-1.border-left.grid-12-12.relative.border-left.border-right.border-bottom
+      .grid-12-left
+        .dark-text The “Green Development” Company was founded in 2004, which is the affiliate of the investment holding “Green Capital”.  During the past period the group has implemented several successful projects. Namely:
+      ul.grid-12-right.developer-screen-1-list
+            each i in items
+              li.developer-screen-1-list-item
+                .white-text64= i.title
+                .dark-text=i.text
+  .developer-screen-2.border-right.border-left.border-bottom.grid-8-16
+    .grid-8.border-right.concept-text-wrapper
+      .light-text Besides the abovementioned projects, the group participated in the developing projects in the different European cities.
+      .light-text Nowadays the group successfully manages 600 m2 -business center “Green Office” being in its ownership on #154 Agmashenebeli avenue, Tbilisi.
+    .grid-16
+      img(src="assets/images/developer/2.jpg" alt="img")
+  .developer-screen-3.border-right.border-left.border-bottom.grid-16-8
+    .grid-8.border-right.concept-text-wrapper
+      .light-text Besides the abovementioned projects, the group participated in the developing projects in the different European cities.
+      .light-text Nowadays the group successfully manages 600 m2 -business center “Green Office” being in its ownership on #154 Agmashenebeli avenue, Tbilisi.
+    .grid-16
+      img(src="assets/images/developer/3.jpg" alt="img")
+
+
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug
