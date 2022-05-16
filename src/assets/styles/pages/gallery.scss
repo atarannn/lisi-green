@@ -10,12 +10,12 @@
 
 .gallery-container {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   height: 100%;
   width: 100%;
   overflow-y: scroll;
-  padding: 50px 180px;
+  padding: 122px 180px;
 }
 
 .gallery-column {
@@ -23,6 +23,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: auto;
   &-img {
     height: 481px;
     width: 453px;
@@ -39,6 +40,3 @@
   }
 }
 
-.middle-column {
-  transform: translateY(-122px);
-}
