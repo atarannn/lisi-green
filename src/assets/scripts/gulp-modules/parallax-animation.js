@@ -6,8 +6,8 @@ parallaxAnim.forEach(section => {
         scrollTrigger: {
             triggerHook: 1,
             trigger: section,
-            start: '0% bottom',
-            end: '100% bottom',
+            start: '-100% bottom',
+            // end: '100% bottom',
             once: true,
         },
     });
@@ -26,8 +26,8 @@ parallaxAnimLogo.forEach(section => {
         scrollTrigger: {
             triggerHook: 1,
             trigger: section,
-            start: '0% bottom',
-            end: '100% bottom',
+            start: '-200% top',
+            // end: '100% top',
             once: true,
         },
     });

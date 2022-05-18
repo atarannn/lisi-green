@@ -83,6 +83,7 @@
 	grid-auto-columns: 1fr;
 	gap: 0 0;
 	grid-auto-flow: row;
+	overflow: hidden;
 	grid-template-areas:
     "grid-10 grid-10 grid-10 grid-10 grid-10 grid-10 grid-10 grid-10 grid-10 grid-10 . grid-12 grid-12 grid-12 grid-12 grid-12 grid-12 grid-12 grid-12 grid-12 grid-12 grid-12 grid-12 .";
 	.grid-10 {
@@ -172,6 +173,9 @@
 		position: absolute;
 		top: 271px;
 		left: var(--field);
+		@include to(1600px) {
+			top: 184px;
+		}
 	}
 	&-right {
 		position: relative;

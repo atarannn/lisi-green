@@ -122,3 +122,17 @@
 		transform: translate(0, -15px);
 	}
 }
+
+@include to(1440px) {
+	@keyframes mousemove {
+		0% {
+			transform: translate(0, -10px);
+		}
+		50% {
+			transform: translate(0, 10px);
+		}
+		100% {
+			transform: translate(0, -10px);
+		}
+	}
+}

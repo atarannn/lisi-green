@@ -27,6 +27,9 @@ section {
       opacity: 1;
       background-image: url('../images/head-screen/block-1-1.jpg');
       background-size: contain;
+      @include to(1600px) {
+        transform: scaleY(1.5);
+      }
     }
     .logo-background {
       position: absolute;
@@ -41,6 +44,10 @@ section {
         fill: $bc;
         transition: fill .2s linear;
       }
+      @include to(1600px) {
+        width: 1000px;
+        height: 666px;
+      }
     }
     .building {
       transition: background-image .4s linear;
@@ -54,6 +61,9 @@ section {
       background-position: bottom;
       background-repeat: no-repeat;
       background-size: contain;
+      @include from(1920px) {
+        background-size: cover;
+      }
     }
     .linear-gradient {
       position: absolute;
@@ -91,6 +101,9 @@ section {
     flex-direction: column;
     justify-content: flex-end;
     margin-bottom: 22px;
+    @include to(1600px) {
+      margin-bottom: 10px;
+    }
   }
   &-title {
     font-family: 'BPG';
@@ -99,6 +112,9 @@ section {
     line-height: 76%;
     color: $wc;
     text-transform: uppercase;
+    @include to(1600px) {
+      font-size: 210px;
+    }
   }
   .lisi {
     z-index: 2;
@@ -135,6 +151,9 @@ section {
       background-position: bottom;
       background-repeat: no-repeat;
       background-size: contain;
+      @include from(1920px) {
+        background-size: cover;
+      }
     }
   }
   .animation-2 {
@@ -192,6 +211,10 @@ section {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    @include to(1600px) {
+      left: 63px;
+      top: var(--offset50);
+    }
   }
   &-text {
     font-family: 'BPG';
@@ -205,13 +228,16 @@ section {
   }
   .margin-bottom {
     margin-bottom: 20px;
+    @include to(1600px) {
+      margin-bottom: 12px;
+    }
   }
   .text-width {
     width: 60%;
   }
   .mouse-wrapper {
     position: absolute;
-    right: -100px;
+    right: calc((-1)*(220px/2));
     bottom: 0;
     height: 100px;
     width: 200px;
@@ -226,6 +252,15 @@ section {
       height: 40px;
       width: 25px;
       animation: 2s cubic-bezier(0.46, 0.03, 0.52, 0.96) 0s infinite mousemove;
+    }
+    @include to(1600px) {
+      right: calc((-1)*(143px/2));
+      width: 143px;
+      height: 71px;
+      svg {
+        height: 29px;
+        width: 18px;
+      }
     }
   }
 }
@@ -268,6 +303,10 @@ section {
         height: 100%;
         width: 100%;
       }
+      @include to(1600px) {
+        width: 531px;
+        height: 345px;
+      }
     }
   }
   .advantages-1, .advantages-2, .advantages-3, .advantages-4, .advantages-5, .advantages-6, .advantages-7, .advantages-8, .advantages-9 {
@@ -302,22 +341,33 @@ section {
   }
   .top--first-text {
     position: absolute;
-    top: 50px;
-    right: 50px;
+    top: var(--offset50);
+    right: var(--offset50);
     left: 136px;
     z-index: 1;
+    @include to(1600px) {
+      left: 101px;
+    }
   }
   .top-text {
     position: absolute;
     top: 50px;
     left: 30px;
     z-index: 1;
+    @include to(1600px) {
+      top: 20px;
+      left: 20px;
+    }
   }
   .bottom-text {
     position: absolute;
     bottom: 30px;
     left: 30px;
     z-index: 1;
+    @include to(1600px) {
+      bottom: 20px;
+      left: 20px;
+    }
   }
   .width-40 {
     width: 40%;
@@ -334,9 +384,18 @@ section {
   &-head {
     margin-bottom: var(--offset50);
   }
-  iframe {
+  .iframe-wrapper {
     width: 97%;
     height: 490px;
+    position: sticky;
+    top: 0px;
+    iframe {
+      height: 100%;
+      width: 100%;
+    }
+    @include to(1600px) {
+      height: 351px;
+    }
   }
   .location-screen-list {
     display: flex;
@@ -357,9 +416,15 @@ section {
     }
     &-item-text-offset {
       margin-left: 200px;
+      @include to(1600px) {
+        margin-left: 136px;
+      }
     }
     &-item-num-offset {
       margin-right: 20px;
+      @include to(1600px) {
+        margin-right: 8px;
+      }
     }
   }
 }
@@ -384,11 +449,18 @@ section {
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-between;
+        @include to(1600px) {
+          margin-left: 73px;
+        }
         svg {
           height: 40px;
           width: 40px;
           @include from(1024px) {
             cursor: pointer;
+          }
+          @include to(1600px) {
+            height: 28px;
+            width: 28px;
           }
         }
       }

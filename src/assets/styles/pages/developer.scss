@@ -6,12 +6,18 @@
   padding-right: var(--field);
   .grid-12-left {
     padding-right: 177px;
+    @include to(1600px) {
+      padding-right: 135px;
+    }
   }
   &-list {
     &-item {
       margin-top: 40px;
       padding-bottom: var(--offset20);
       border-bottom: 1px solid $bc;
+      @include to(1600px) {
+        margin-top: 30px;
+      }
       .dark-text {
         margin-top: var(--offset20);
       }
@@ -32,6 +38,9 @@
   .light-text {
     &:first-child {
       margin-bottom: 40px;
+      @include to(1600px) {
+        margin-bottom: 30px;
+      }
     }
   }
 }

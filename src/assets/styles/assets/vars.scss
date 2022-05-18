@@ -30,3 +30,33 @@ $mint: #00B09C;
   --btn: 80px;
 }
 
+@media screen and (max-width: 1600px) {
+  :root {
+    --header-footer-font: 16px;
+    --font16: 12px;
+    --font24: 16px;
+    --font36: 24px;
+    --font64: 45px;
+    --title-font: 86px;
+
+    --offset300: 215px;
+    --offset150: 110px;
+    --offset50: 30px;
+    --offset30: 20px;
+    --offset20: 16px;
+    --field: 75px;
+
+    --logo-h: 74px;
+    --logo-h2: 60px;
+    --logo-w: 141px;
+    --logo-w2: 118px;
+
+    --btn: 80px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  :root {
+    --btn: 60px;
+  }
+}

@@ -16,6 +16,9 @@
   .grid-11 {
     grid-area: grid-11;
   }
+  .title {
+    width: 90%;
+  }
 }
 .concept-screen-2 {
   background-color: $blue;
@@ -47,4 +50,7 @@
   color: $wc;
   text-align: left;
   margin-top: 40px;
+  @include to(1600px) {
+    margin-top: 30px;
+  }
 }

@@ -49,6 +49,10 @@
       height: 40px;
       width: 40px;
       transform: rotate(135deg);
+      @include to(1600px) {
+        height: 28px;
+        width: 28px;
+      }
     }
     .light-text {
       width: 60%;
@@ -79,7 +83,11 @@ form {
   width: 633px;
   height: 100vh;
   background: $bc;
-  padding: 123px var(--field);
+  padding: 0 var(--field);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
   position: absolute;
   .menu-close {
     top: 28px;
@@ -98,6 +106,9 @@ form {
   align-items: center;
   justify-content: flex-start;
   margin-top: 60px;
+  @include to(1600px) {
+    margin-top: 30px;
+  }
   span {
     margin-left: 30px;
   }
@@ -105,6 +116,10 @@ form {
     height: 40px;
     width: 40px;
     transition: transform 0.3s linear;
+    @include to(1600px) {
+      height: 28px;
+      width: 28px;
+    }
   }
   &:hover {
     svg {
@@ -123,7 +138,6 @@ form {
   color: $wc;
   text-transform: uppercase;
   text-align: left;
-  margin-bottom: var(--offset50);
 }
 .form-label {
   font-weight: 400;
@@ -146,6 +160,9 @@ form {
   background: none;
   background: $wc;
   transition: all 0.3s;
+  @include to(1600px) {
+    margin: 30px 0 0;
+  }
 }
 [data-animation="focus"] .input-message {
   position: absolute;
@@ -154,7 +171,7 @@ form {
   z-index: 3;
   padding: 0 7px;
   display: flex;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 14px;
   transform: translate(0%, -50%);
   user-select: none;
@@ -167,6 +184,9 @@ form {
   align-items: flex-start;
   width: 100%;
   height: 90px;
+  @include to(1600px) {
+    height: 60px;
+  }
 }
 .form-field__input {
   width: 100%;
@@ -181,6 +201,10 @@ form {
   text-align: left;
   height: 90px;
   padding-left: 30px;
+  @include to(1600px) {
+    height: 60px;
+    padding-left: 19px;
+  }
   &::placeholder {
     color: $bc;
   }
@@ -210,6 +234,10 @@ form {
   text-align: left;
   font-size: var(--font16);
   transform: translate(0%, 100%);
+  @include to(1600px) {
+    top: -40px;
+    padding-left: 19px;
+  }
 }
 [data-field-input][data-status="field--inactive"]:not(#r) {
   .input-message {
@@ -281,6 +309,9 @@ form {
 .form-textarea {
   position: relative;
   margin: 40px 0 0 0;
+  @include to(1600px) {
+    margin: 30px 0 0;
+  }
   textarea {
     height: 150px;
     width: 100%;
@@ -295,6 +326,10 @@ form {
     color: $bc;
     border: none;
     padding: 28px 30px;
+    @include to(1600px) {
+      padding: 19px;
+      height: 100px;
+    }
     &::placeholder {
       color: $bc;
     }

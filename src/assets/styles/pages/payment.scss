@@ -3,5 +3,8 @@
   .concept-text {
     margin-top: 0;
     margin-bottom: 40px;
+    @include to(1600px) {
+      margin-bottom: 30px;
+    }
   }
 }

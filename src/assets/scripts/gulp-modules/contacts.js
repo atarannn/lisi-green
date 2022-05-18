@@ -50,7 +50,10 @@ function initMap() {
     });
     const baseFolder = './assets/images/contacts/';
     var buildLogoSize = new google.maps.Size(72, 90);
-    const markersAdresses = {
+    if (document.documentElement.clientWidth < 1600) {
+        var buildLogoSize = new google.maps.Size(54, 68);
+    }
+        const markersAdresses = {
         main: `${baseFolder}marker.svg`,
     };
     const markersData = [

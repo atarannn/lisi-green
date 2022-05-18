@@ -21,6 +21,9 @@
     z-index: 1;
     height: 793px;
     width: auto;
+    @include to(1600px) {
+      height: 700px;
+    }
   }
   .grid-8 {
     height: 100%;
@@ -42,12 +45,18 @@
       right: 0;
       bottom: 0;
       z-index: 0;
-      height: 613px;
+      height: auto;
       width: 923px;
+      @include to(1600px) {
+        width: 612px;
+      }
     }
     &-text {
       z-index: 2;
       margin-left: 250px;
+      @include to(1600px) {
+        margin-left: 185px;
+      }
       .head-screen-title {
         margin-bottom: var(--offset50);
       }
@@ -60,6 +69,9 @@
         justify-content: flex-start;
         .header-3d {
           margin-right: 60px;
+          @include to(1600px) {
+            margin-right: 35px;
+          }
         }
       }
     }

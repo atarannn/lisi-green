@@ -29,6 +29,10 @@
       right: 0;
       bottom: 0;
       z-index: 100;
+      @include to(1600px) {
+        width: 656px;
+        height: 436px;
+      }
     }
   }
   &-right {
@@ -47,6 +51,13 @@
           &:first-child {
             margin-top: 0;
           }
+          @include to(1600px) {
+            margin-top: 12px;
+          }
+        }
+        @include to(1600px) {
+          top: var(--offset50);
+          left: 50px;
         }
       }
     }
@@ -60,6 +71,9 @@
   width: var(--btn);
   border-radius: 100%;
   background-color: $green;
+  @include to(1600px) {
+    top: 37px;
+  }
   @include from(1024px) {
     cursor: pointer;
   }
@@ -76,6 +90,9 @@
       height: 2px;
       width: 30px;
       transform: rotate(45deg);
+      @include to(1440px) {
+        width: 22px;
+      }
     }
     .first-line {
       margin-bottom: -2px;

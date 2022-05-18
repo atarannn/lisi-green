@@ -75,6 +75,10 @@ function initMap() {
     var baseFolder = './assets/images/infrastructure/markers/';
     var defaultMarkerSize = new google.maps.Size(64, 80);
     var buildLogoSize = new google.maps.Size(80, 100);
+    if (document.documentElement.clientWidth < 1600) {
+        var defaultMarkerSize = new google.maps.Size(46, 57);
+        var buildLogoSize = new google.maps.Size(57, 71);
+    }
     const markersAdresses = {
         lisi: `${baseFolder}1.svg`,
         schools: `${baseFolder}2.svg`,
