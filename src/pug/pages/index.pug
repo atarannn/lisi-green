@@ -5,12 +5,6 @@ block variable
     var title_page = 'home'
     var id_page = 'home-page'
     var class_page = 'home'
-    var breadcrumbsSubitem = [
-      {
-        label: 'About',
-        link: pagesLink[0].about
-      }
-    ]
     var items = [{
       num: '3.0',
       text: 'British-Georgian Academy'
@@ -59,27 +53,28 @@ block scripts
   script(defer src='./assets/scripts/text-animation.js')
   script(defer src='./assets/scripts/parallax-animation.js')
 block content
-  section.head-screen.grid-16-8.border-top.border-right.border-bottom.border-left
-    .grid-16.relative
+  section.head-screen.grid-16-8.border-top.border-right.border-bottom.border-left.mob-border-top.mob-border-left.mob-border-right.mob-border-bottom
+    .grid-16.mob-border-bottom
       .green-block.border-right
         .head-screen-block-1.relative.animation-1
           .main-background-1
           .logo-background
-            +svg('logo')
+            +svg('logo').desktop
+            +svg('logo-mob').mobile
           .building
           .linear-gradient
           .head-screen-title-wrapper
             .head-screen-title.lisi Lisi
             .head-screen-title.green Green
             .head-screen-title.urban Urban
+    .grid-8.column.mobile-row.relative
       .mouse-wrapper
         +svg('mouse')
-    .grid-8.column
-      .blue-block.border-bottom.h-50
+      .blue-block.border-bottom.h-50.mob-h-100.mob-w-50.mob-border-right
         .head-screen-block-2.animation-2.relative
           .main-background-2
           .building
-      .mint-block.h-50
+      .mint-block.h-50.mob-h-100.mob-w-50
         .head-screen-block-3.relative.animation-3
           .main-background-3
           .building
@@ -90,47 +85,49 @@ block content
             a(href="#").head-screen-text.white-underline-hover instagram
             a(href="#").head-screen-text.white-underline-hover facebook
             a(href="#").head-screen-text.white-underline-hover youtube
-  section.advantages-screen.border-left.border-right.padding300-top
-    .advantages-1.relative.border-top.border-right.border-bottom
+  section.advantages-screen.border-left.border-right.padding300-top.mob-border-left.mob-border-right.mob-border-bottom
+    .advantages-1.relative.border-top.border-right.border-bottom.mob-border-top
       img(src="assets/images/advantages-screen/1.jpg")
       .dark-text.top--first-text We care about the environment and in order to minimize its pollution solar power batteries have been installed here, which will give light in public spaces, entrances, parking and landscaped paths.
     .advantages-title.relative
       .title WHY DID YOU CHOOSE LISI GREEN URBAN?
       .advantages-title-logo
         img(src="assets/images/advantages-screen/logo.svg")
-    .advantages-2.relative.border-top.border-bottom.border-right
+    .advantages-2.relative.border-top.border-bottom.border-right.mob-border-top.mob-border-right
       img(src="assets/images/advantages-screen/2.jpg")
       .dark-text.bottom-text 92 Indoor parking
-    .advantages-3.relative.border-top.border-bottom
+    .advantages-3.relative.border-top.border-bottom.mob-border-top
       img(src="assets/images/advantages-screen/3.jpg")
       .dark-text.bottom-text Event Room
-    .advantages-4.border-bottom.border-right.relative
+    .advantages-4.border-bottom.border-right.relative.mob-border-top.mob-border-right
       img(src="assets/images/advantages-screen/4.jpg")
       .dark-text.bottom-text.width-45 We promote a healthy lifestyle, that's why you can practice near home.
-    .advantages-5.relative.border-bottom
+    .advantages-5.relative.border-bottom.mob-border-top
       img(src="assets/images/advantages-screen/5.jpg")
       .light-text.bottom-text Bicycle lane and Walking alley
-    .advantages-6.relative.border-bottom
+    .advantages-6.relative.border-bottom.mob-border-top
       img(src="assets/images/advantages-screen/6.jpg")
       .light-text.bottom-text.width-40  Green yard (with squirrels, hedgehogs, rabbits on the territory)
-    .advantages-7.relative.border-bottom.border-right
+    .advantages-7.relative.border-bottom.border-right.mob-border-top.mob-border-right
       img(src="assets/images/advantages-screen/7.jpg")
       .light-text.bottom-text Different entrance
-    .advantages-8.relative.border-bottom
+    .advantages-8.relative.border-bottom.mob-border-top
       img(src="assets/images/advantages-screen/8.jpg")
       .light-text.top-text Gazebo and Hammocks
-    .advantages-9.relative.border-bottom.border-left
+    .advantages-9.relative.border-bottom.border-left.mob-border-top
       img(src="assets/images/advantages-screen/9.jpg")
       .light-text.bottom-text.width-60 Arranged Separate playground for children
-  section.location-screen.border-left.border-right.border-bottom.padding300-top.padding300-bottom
+  section.location-screen.border-left.border-right.border-bottom.padding300-top.padding300-bottom.mob-border-left.mob-border-right.mob-border-bottom
     .grid-10-12.location-screen-head
       .grid-10
         .title European District
       .grid-12
-        .dark-text Leaders of the capital city of the United Arab Emirates Abu Dhabi planned to develop the world’s first carbon free city within next 10 years. This city will be a green example in which the emission of harmful gases will be maximized and the fuel consumption will be minimized.
+        .dark-text.desktop Leaders of the capital city of the United Arab Emirates Abu Dhabi planned to develop the world’s first carbon free city within next 10 years. This city will be a green example in which the emission of harmful gases will be maximized and the fuel consumption will be minimized.
     .grid-10-12.relative
-      .grid-10.iframe-wrapper
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/vah4_vQE4KQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      .grid-10.location-screen-mobile
+        .iframe-wrapper
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/vah4_vQE4KQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        .dark-text.mobile Leaders of the capital city of the United Arab Emirates Abu Dhabi planned to develop the world’s first carbon free city within next 10 years. This city will be a green example in which the emission of harmful gases will be maximized and the fuel consumption will be minimized.
       ul.grid-12.location-screen-list
         each i in items
           li.location-screen-list-item

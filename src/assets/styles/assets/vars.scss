@@ -60,3 +60,19 @@ $mint: #00B09C;
     --btn: 60px;
   }
 }
+
+@media screen and (max-width: 1024px) {
+  :root {
+    --title-font: 64px;
+
+    --offset300: 150px;
+    --offset150: 160px;
+    --offset50: 20px;
+    --field: 20px;
+
+    --logo-h: 62px;
+    --logo-h2: 62px;
+    --logo-w: 120px;
+    --logo-w2: 120px;
+  }
+}

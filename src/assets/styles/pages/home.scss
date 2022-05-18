@@ -48,6 +48,10 @@ section {
         width: 1000px;
         height: 666px;
       }
+      @include to(1024px) {
+        width: 100%;
+        height: 100%;
+      }
     }
     .building {
       transition: background-image .4s linear;
@@ -89,6 +93,9 @@ section {
     .building {
       transition: background-image .4s linear;
       background-image: url('../images/head-screen/block-1-3.png');
+      @include to(1024px) {
+        background-image: url('../images/head-screen/block-1-2.png');
+      }
     }
   }
   &-title-wrapper {
@@ -104,6 +111,9 @@ section {
     @include to(1600px) {
       margin-bottom: 10px;
     }
+    @include to(1024px) {
+      margin-bottom: 0;
+    }
   }
   &-title {
     font-family: 'BPG';
@@ -114,6 +124,9 @@ section {
     text-transform: uppercase;
     @include to(1600px) {
       font-size: 210px;
+    }
+    @include to(1024px) {
+      font-size: 170px;
     }
   }
   .lisi {
@@ -164,6 +177,9 @@ section {
     .building {
       transition: background-image .3s linear;
       background-image: url('../images/head-screen/block-2-3.png');
+      @include to(1024px) {
+        background-image: url('../images/head-screen/block-2-4.png');
+      }
     }
   }
   .mint-block {
@@ -200,6 +216,10 @@ section {
     .building {
       transition: background-image .3s linear;
       background-image: url('../images/head-screen/block-3-3.png');
+      @include to(1024px) {
+        background-image: url('../images/head-screen/block-3-4.png');
+        background-size: cover;
+      }
     }
   }
   &-text-wrapper{
@@ -214,6 +234,10 @@ section {
     @include to(1600px) {
       left: 63px;
       top: var(--offset50);
+    }
+    @include to(1024px) {
+      left: 67px;
+      top: 30px;
     }
   }
   &-text {
@@ -237,7 +261,7 @@ section {
   }
   .mouse-wrapper {
     position: absolute;
-    right: calc((-1)*(220px/2));
+    left: calc((-1)*(220px/2));
     bottom: 0;
     height: 100px;
     width: 200px;
@@ -254,13 +278,17 @@ section {
       animation: 2s cubic-bezier(0.46, 0.03, 0.52, 0.96) 0s infinite mousemove;
     }
     @include to(1600px) {
-      right: calc((-1)*(143px/2));
+      left: calc((-1)*(143px/2));
       width: 143px;
       height: 71px;
       svg {
         height: 29px;
         width: 18px;
       }
+    }
+    @include to(1024px) {
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 }
@@ -278,8 +306,21 @@ section {
     "adv-4 adv-4 adv-4 adv-4 adv-4 adv-4 adv-4 adv-4 adv-5 adv-5 adv-5 adv-5 adv-5 adv-5 adv-5 adv-5 adv-5 adv-5 adv-5 adv-5 adv-5 adv-5 adv-5 adv-5"
     "adv-6 adv-6 adv-6 adv-6 adv-6 adv-6 adv-6 adv-6 adv-6 adv-6 adv-6 adv-6 adv-6 adv-6 adv-6 adv-6 adv-9 adv-9 adv-9 adv-9 adv-9 adv-9 adv-9 adv-9"
     "adv-7 adv-7 adv-7 adv-7 adv-7 adv-7 adv-7 adv-7 adv-8 adv-8 adv-8 adv-8 adv-8 adv-8 adv-8 adv-8 adv-9 adv-9 adv-9 adv-9 adv-9 adv-9 adv-9 adv-9";
+  @include to(1024px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto repeat(6, 450px);
+    grid-template-areas:
+            "adv-title adv-title"
+            "adv-1 adv-1"
+            "adv-2 adv-3"
+            "adv-5 adv-5"
+            "adv-4 adv-9"
+            "adv-6 adv-6"
+            "adv-7 adv-8"
+  }
   img {
     height: 100%;
+    object-fit: cover;
   }
   .advantages-title {
     grid-area: adv-title;
@@ -290,6 +331,10 @@ section {
       text-align: right;
       width: 80%;
       margin-left: auto;
+      @include to(1024px) {
+        margin-right: var(--field);
+        margin-bottom: var(--offset300);
+      }
     }
     &-logo {
       height: 475px;
@@ -348,6 +393,9 @@ section {
     @include to(1600px) {
       left: 101px;
     }
+    @include to(1024px) {
+      left: 50%;
+    }
   }
   .top-text {
     position: absolute;
@@ -357,6 +405,10 @@ section {
     @include to(1600px) {
       top: 20px;
       left: 20px;
+    }
+    @include to(1024px) {
+      top: auto;
+      bottom: 20px;
     }
   }
   .bottom-text {
@@ -383,6 +435,16 @@ section {
   background-color: $green;
   &-head {
     margin-bottom: var(--offset50);
+    @include to(1024px) {
+      .grid-10 {
+        display: grid;
+        grid-template-columns: repeat(24, 1fr);
+        grid-template-areas: "title title title title title title title title title title title title title . . . . . . . . . . .";
+        .title {
+          grid-area: title;
+        }
+      }
+    }
   }
   .iframe-wrapper {
     width: 97%;
@@ -395,6 +457,26 @@ section {
     }
     @include to(1600px) {
       height: 351px;
+    }
+    @include to(1024px) {
+      position: static;
+      width: 100%;
+      height: 230px;
+    }
+  }
+  .location-screen-mobile {
+    @include to(1024px) {
+      display: grid;
+      grid-template-columns: repeat(24, 1fr);
+      grid-template-areas: "video video video video video video video video video video video video video . text text text text text text text text text text";
+      margin-bottom: 50px;
+      .iframe-wrapper {
+        grid-area: video;
+      }
+      .dark-text.mobile {
+        grid-area: text;
+        align-self: center;
+      }
     }
   }
   .location-screen-list {
@@ -410,6 +492,9 @@ section {
       padding-bottom: 20px;
       width: 100%;
       margin-top: var(--offset30);
+      @include to(1024px) {
+        padding-bottom: 16px;
+      }
       &:first-child {
         margin-top: 0;
       }
@@ -424,6 +509,9 @@ section {
       margin-right: 20px;
       @include to(1600px) {
         margin-right: 8px;
+      }
+      @include to(1024px) {
+        margin-right: 34px;
       }
     }
   }
@@ -455,7 +543,7 @@ section {
         svg {
           height: 40px;
           width: 40px;
-          @include from(1024px) {
+          @include from(1023px) {
             cursor: pointer;
           }
           @include to(1600px) {

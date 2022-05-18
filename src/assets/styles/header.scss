@@ -48,7 +48,7 @@
       align-items: flex-start;
       justify-content: flex-start;
       .header-text {
-        @include from(1024px) {
+        @include from(1023px) {
           cursor: pointer;
         }
       }
@@ -69,7 +69,7 @@
       border-radius: 100%;
       background-color: $green;
       position: relative;
-      @include from(1024px) {
+      @include from(1023px) {
         cursor: pointer;
         &:hover {
           .first-line {
@@ -133,7 +133,7 @@
   .column {
     margin-left: var(--offset20);
   }
-  @include from(1024px) {
+  @include from(1023px) {
     &:hover {
       svg {
         transform: rotate(-45deg);

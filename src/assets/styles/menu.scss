@@ -74,7 +74,7 @@
   @include to(1600px) {
     top: 37px;
   }
-  @include from(1024px) {
+  @include from(1023px) {
     cursor: pointer;
   }
   .line-wrapper {

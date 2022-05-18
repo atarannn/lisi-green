@@ -41,7 +41,7 @@
 }
 
 .cubic-hover {
-	@include from(1024px) {
+	@include from(1023px) {
 		overflow: hidden;
 		position: relative;
 		display: inline-block;
@@ -78,7 +78,7 @@
 }
 
 .circle-animation {
-	@include from(1024px) {
+	@include from(1023px) {
 		overflow: hidden;
 		&:before {
 			content: '';

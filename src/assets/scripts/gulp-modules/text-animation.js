@@ -18,7 +18,7 @@ function homeAnimationAdditional() {
                 .fromTo(
                     text.querySelectorAll('span>span'),
                     { yPercent: 100 },
-                    { yPercent: 0, delay: 0.3, stagger: 0.03, duration: 0.8, ease: "power4.out" }
+                    { yPercent: 0, delay: 0.3, stagger: 0.02, duration: 0.4, ease: "power4.out" }
                 );
         });
     }
@@ -43,7 +43,7 @@ function homeAnimationAdditional() {
                 .fromTo(
                     text.querySelectorAll('span>span'),
                     { yPercent: 100 },
-                    { yPercent: 0, stagger: 0.03, duration: 0.8, ease: "power4.out", delay: 0.5}
+                    { yPercent: 0, stagger: 0.02, duration: 0.4, ease: "power4.out", delay: 0.5}
                 );
         });
     }
@@ -66,7 +66,7 @@ function homeAnimationAdditional() {
         tl.fromTo(
             section,
             { x: '500px', duration: 0, autoAlpha: 0},
-            { x: 0, duration: 0.8, autoAlpha: 1},
+            { x: 0, duration: 0.4, autoAlpha: 1},
         );
     });
 
@@ -87,7 +87,7 @@ function homeAnimationAdditional() {
         tl.fromTo(
             section,
             { y: '500px', duration: 0, autoAlpha: 0},
-            { y: 0, duration: 0.8, autoAlpha: 1},
+            { y: 0, duration: 0.4, autoAlpha: 1},
         );
     });
 
