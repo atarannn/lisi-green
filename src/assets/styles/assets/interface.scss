@@ -71,6 +71,7 @@
 	padding-bottom: var(--offset300);
 }
 .grid-16-8 {
+	height: 100vh;
 	display: grid;
 	grid-template-columns: repeat(24, 1fr);
 	grid-template-rows: 1fr;
@@ -128,7 +129,7 @@
 		grid-area: grid-12;
 	}
 	@include to(1024px) {
-		grid-template-columns: var(--field) 1fr var(--field);
+		grid-template-columns: 39px 1fr 39px;
 		grid-template-rows: repeat(2, auto);
 		grid-template-areas:
 						". grid-10 ."

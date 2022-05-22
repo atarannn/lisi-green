@@ -134,8 +134,8 @@ block content
             .title.location-screen-list-item-num-offset= i.num
             .dark-text km
             .dark-text.location-screen-list-item-text-offset=i.text
-  section.apartment-screen.border-right.border-left.border-bottom.grid-16-8
-    .grid-16.border-right.apartment-screen-block.relative
+  section.apartment-screen.border-right.border-left.border-bottom.grid-16-8.mob-border-right.mob-border-left.mob-border-bottom
+    .grid-16.border-right.apartment-screen-block.relative.mob-border-bottom
       img(src="assets/images/apartment/1.jpg").animation-img
       .apartment-screen-block-text
         .title Choose an apartment
@@ -143,9 +143,9 @@ block content
           .light-text This city will be a green example in which the emission of harmful gases will
           a(href="#").animation-arrow
             +svg('arrow')
-    .grid-8.column
-      img(src="assets/images/apartment/2.jpg").border-bottom
-      img(src="assets/images/apartment/3.jpg")
+    .grid-8.column.mobile-row
+      img(src="assets/images/apartment/2.jpg").border-bottom.mob-h-100.mob-w-50.mob-border-right
+      img(src="assets/images/apartment/3.jpg").mob-h-100.mob-w-50
 
 block footer
   include ../includes/footer.pug

@@ -14,12 +14,18 @@
   }
   &-nav {
     padding: var(--offset50) 0 var(--offset50) 19px;
+    @include to(1024px) {
+      padding: 39px 0 0 10px;
+    }
     ul {
       height: 100%;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       justify-content: space-between;
+      @include to(1024px) {
+        justify-content: flex-start;
+      }
       li {
         z-index: 101;
       }
@@ -59,6 +65,10 @@
           top: var(--offset50);
           left: 50px;
         }
+        @include to(1024px) {
+          top: 30px;
+          left: 36px;
+        }
       }
     }
   }
@@ -73,6 +83,10 @@
   background-color: $green;
   @include to(1600px) {
     top: 37px;
+  }
+  @include to(1024px) {
+    background-color: $bc;
+    right: 7px;
   }
   @include from(1023px) {
     cursor: pointer;

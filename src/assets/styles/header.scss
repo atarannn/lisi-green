@@ -16,6 +16,11 @@
   @include to(1600px) {
     padding-top: 35px;
   }
+  @include to(1024px) {
+    grid-template-columns: 7px repeat(22, 1fr) 7px;
+    grid-template-areas:
+    ". header-left header-left header-left header-left header-left header-left header-left header-left header-left header-left header-left header-left . . . header-right header-right header-right header-right header-right header-right header-right .";
+  }
   &.not-on-top {
     background: #00B09CCC;
     padding: 10px 0;
@@ -35,6 +40,9 @@
     align-items: center;
     justify-content: space-between;
     padding-right: 167px;
+    @include to(1024px) {
+      padding-right: 0;
+    }
     &-logo {
       img {
         height: var(--logo-h);
@@ -63,12 +71,18 @@
     @include to(1600px) {
       padding-left: 63px;
     }
+    @include to(1024px) {
+      padding-left: 0;
+    }
     &-close {
       height: var(--btn);
       width: var(--btn);
       border-radius: 100%;
       background-color: $green;
       position: relative;
+      @include to(1024px) {
+        background-color: $bc;
+      }
       @include from(1023px) {
         cursor: pointer;
         &:hover {
