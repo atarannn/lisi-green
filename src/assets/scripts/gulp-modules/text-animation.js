@@ -49,7 +49,7 @@ function homeAnimationAdditional() {
     }
     splitToLinesAndFadeUp2('.advantages-screen .dark-text, .advantages-screen .light-text');
 
-    const blockAnim = document.querySelectorAll('.head-screen-text-wrapper, .contacts-right-info');
+    const blockAnim = document.querySelectorAll('.head-screen-text-wrapper, .contacts-right-info, .contacts-row-mob-right');
     blockAnim.forEach(section => {
         gsap.set(section, { overflow: 'visible' });
         const tl = gsap.timeline({

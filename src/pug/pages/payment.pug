@@ -21,7 +21,7 @@ block scripts
   script(defer src='./assets/scripts/text-animation.js')
   script(defer src='./assets/scripts/parallax-animation.js')
 block content
-  .first-screen.border-top.border-right.border-bottom.border-left.grid-16-8
+  .first-screen.border-top.border-right.border-bottom.border-left.grid-16-8.mob-border-bottom.mob-border-top.mob-border-right.mob-border-left
     .grid-16.border-right.relative
       img(src="assets/images/payment/1.jpg" alt="img")
       .first-screen-text
@@ -29,7 +29,7 @@ block content
     .grid-8.first-screen-right
       .first-screen-right-logo
         img(src="assets/images/first-screen-logo.svg" alt="svg")
-  .payment-screen.border-right.border-left.border-bottom.grid-8-16
+  .payment-screen.border-right.border-left.border-bottom.grid-8-16.mob-border-bottom.mob-border-right.mob-border-left
     .grid-8.border-right.concept-text-wrapper
       .concept-text The “Green Development” offers various payment options for individuals and legal entities.
       .concept-text You can choose for yourself a flexible calculation scheme and purchase an apartment in LISI GREEN URBAN.
@@ -38,8 +38,8 @@ block content
         .column
           .header-text Choose an
           .header-text apartment
-    .grid-16
-      img(src="assets/images/payment/2.jpg" alt="img")
+    .grid-16.mob-border-top
+      img(src="assets/images/payment/2.jpg" alt="img").mobile-img-h
 
 
 block footer

@@ -3,7 +3,7 @@
   padding-top: var(--offset50);
   padding-bottom: var(--offset150);
   display: grid;
-  grid-template-columns: var(--field) repeat(8, 1fr) var(--field) var(--field) var(--field) repeat(11, 1fr) var(--field);
+  grid-template-columns: var(--field) repeat(22, 1fr) var(--field);
   grid-template-rows: 1fr;
   grid-auto-columns: 1fr;
   gap: 0 0;
@@ -18,6 +18,19 @@
   }
   .title {
     width: 90%;
+    @include to(1024px) {
+      width: 100%;
+      margin-top: 50px;
+    }
+  }
+  @include to(1600px) {
+    padding-top: 39px;
+  }
+  @include  to(1024px) {
+    padding: 80px 39px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 .concept-screen-2 {
@@ -41,6 +54,9 @@
   align-items: flex-start;
   justify-content: center;
   padding: 0 var(--field);
+  @include to(1024px) {
+    padding: 80px 39px;
+  }
 }
 .concept-text {
   font-family: 'BPG';

@@ -7,4 +7,9 @@
       margin-bottom: 30px;
     }
   }
+  @include to(1024px) {
+    &.grid-8-16 {
+      flex-direction: column;
+    }
+  }
 }

@@ -5,6 +5,9 @@
       @include to(1600px) {
         margin-bottom: 40px;
       }
+      @include to(1024px) {
+        margin-bottom: 50px;
+      }
     }
   }
   .grid-8-8-16 {
@@ -21,6 +24,10 @@
     top: 0;
     z-index: 1;
     width: 100%;
+    @include to(1024px) {
+      grid-template-areas:
+    ". . . . . . . . . . . . grid-8 grid-8 grid-8 grid-8 grid-8 grid-8 grid-8 grid-8 grid-8 grid-8 grid-8 grid-8";
+    }
   }
   .map-head-wrapper {
     grid-area: grid-8;
@@ -62,6 +69,9 @@
         padding-left: 30px;
         padding-right: 130px;
       }
+      @include to(1024px) {
+        padding-right: 55px;
+      }
     }
   }
   .map {
@@ -79,14 +89,26 @@
     position: static;
     width: 100%;
   }
+  @include to(1024px) {
+    .grid-8-16 {
+      display: grid;
+      grid-template-areas: "grid-8 grid-8 grid-8 grid-8 grid-8 grid-8 grid-8 grid-8 grid-8 grid-8 grid-8 grid-8 grid-16 grid-16 grid-16 grid-16 grid-16 grid-16 grid-16 grid-16 grid-16 grid-16 grid-16 grid-16";
+      .grid-8 {
+        height: 100%;
+      }
+    }
+  }
+}
+.contacts-row-margin {
+  margin-top: var(--offset20);
+  @include to(1024px) {
+    margin-top: 20px;
+  }
 }
 .contacts-row {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  &:last-child {
-    margin-top: var(--offset20);
-  }
   svg {
     height: var(--btn);
     width: var(--btn);
@@ -111,6 +133,20 @@
     }
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+}
+
+.contacts-row-mob {
+  @include to(1024px) {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    &-right {
+      margin-left: 173px;
+      .light-text {
+        margin-bottom: 10px;
+      }
     }
   }
 }

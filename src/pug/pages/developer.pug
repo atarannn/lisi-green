@@ -58,7 +58,7 @@ block scripts
   script(defer src='./assets/scripts/text-animation.js')
   script(defer src='./assets/scripts/parallax-animation.js')
 block content
-  .first-screen.border-top.border-right.border-bottom.border-left.grid-16-8
+  .first-screen.border-top.border-right.border-bottom.border-left.grid-16-8.mob-border-bottom.mob-border-top.mob-border-right.mob-border-left
     .grid-16.border-right.relative
       img(src="assets/images/developer/1.jpg" alt="img")
       .first-screen-text
@@ -66,7 +66,7 @@ block content
     .grid-8.first-screen-right
       .first-screen-right-logo
         img(src="assets/images/first-screen-logo.svg" alt="svg")
-  .developer-screen-1.border-left.grid-12-12.relative.border-left.border-right.border-bottom
+  .developer-screen-1.border-left.grid-12-12.relative.border-left.border-right.border-bottom.mob-border-bottom.mob-border-right.mob-border-left
       .grid-12-left
         .dark-text The “Green Development” Company was founded in 2004, which is the affiliate of the investment holding “Green Capital”.  During the past period the group has implemented several successful projects. Namely:
       ul.grid-12-right.developer-screen-1-list
@@ -74,18 +74,18 @@ block content
               li.developer-screen-1-list-item
                 .white-text64= i.title
                 .dark-text=i.text
-  .developer-screen-2.border-right.border-left.border-bottom.grid-8-16
+  .developer-screen-2.border-right.border-left.border-bottom.grid-8-16.mob-border-bottom.mob-border-right.mob-border-left
     .grid-8.border-right.concept-text-wrapper
       .light-text Besides the abovementioned projects, the group participated in the developing projects in the different European cities.
       .light-text Nowadays the group successfully manages 600 m2 -business center “Green Office” being in its ownership on #154 Agmashenebeli avenue, Tbilisi.
-    .grid-16
-      img(src="assets/images/developer/2.jpg" alt="img")
-  .developer-screen-3.border-right.border-left.border-bottom.grid-16-8
+    .grid-16.mob-border-bottom
+      img(src="assets/images/developer/2.jpg" alt="img").mobile-img-h
+  .developer-screen-3.border-right.border-left.border-bottom.grid-16-8.mob-border-bottom.mob-border-right.mob-border-left
     .grid-8.border-right.concept-text-wrapper
       .light-text Besides the abovementioned projects, the group participated in the developing projects in the different European cities.
       .light-text Nowadays the group successfully manages 600 m2 -business center “Green Office” being in its ownership on #154 Agmashenebeli avenue, Tbilisi.
-    .grid-16
-      img(src="assets/images/developer/3.jpg" alt="img")
+    .grid-16.mob-border-bottom
+      img(src="assets/images/developer/3.jpg" alt="img").mobile-img-h
 
 
 block footer

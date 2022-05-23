@@ -22,32 +22,45 @@ block scripts
   script(defer src='./assets/scripts/text-animation.js')
   script(defer src='./assets/scripts/parallax-animation.js')
 block content
-  .first-screen.border-top.border-right.border-bottom.border-left.grid-16-8
+  .first-screen.border-top.border-right.border-bottom.border-left.grid-16-8.mob-border-bottom.mob-border-top.mob-border-right.mob-border-left
     .grid-16.border-right.relative
       img(src="assets/images/contacts/1.jpg" alt="img")
       .first-screen-text
         .title= title_page
-        .contacts-row
+        .contacts-row.desktop
           +svg('phone')
           a(href="tel:+995322552277").white-text36.white-underline-hover (+995) 32 255 22 77
-        .contacts-row
+        .contacts-row.desktop.contacts-row-margin
           +svg('mail')
           a(href="mailto:SALES@UBANI.GE").white-text36.white-underline-hover SALES@UBANI.GE
+        .contacts-row-mob.mobile
+          .contacts-row-mob-left
+            .contacts-row
+              +svg('phone')
+              a(href="tel:+995322552277").white-text36.white-underline-hover (+995) 32 255 22 77
+            .contacts-row.contacts-row-margin
+              +svg('mail')
+              a(href="mailto:SALES@UBANI.GE").white-text36.white-underline-hover SALES@UBANI.GE
+          .contacts-row-mob-right.column
+            a(href="#").light-text.white-underline-hover instagram
+            a(href="#").light-text.white-underline-hover facebook
+            a(href="#").light-text.white-underline-hover youtube
+
     .grid-8.first-screen-right
       .contacts-right-info.column
         a(href="#").light-text.white-underline-hover instagram
         a(href="#").light-text.white-underline-hover facebook
         a(href="#").light-text.white-underline-hover youtube
       .first-screen-right-logo
-            img(src="assets/images/first-screen-logo.svg" alt="svg")
-  .contacts-screen.grid-8-16.border-right.border-left.border-bottom.relative
+        img(src="assets/images/first-screen-logo.svg" alt="svg")
+  .contacts-screen.grid-8-16.border-right.border-left.border-bottom.relative.mob-border-bottom.mob-border-right.mob-border-left
     .grid-8-8-16
       .map-head-wrapper
         .map-head-marker
           img(src="assets/images/contacts/map-head-marker.svg" alt="svg")
         .map-head-text
           .white-text36 Tbilisi, Avto Varazi str. #42
-    .grid-8.border-right
+    .grid-8.border-right.mob-border-right
       form(data-contacts autocomplete="off")
         .form-title Keep in touch
         .form-field.form-field-input(data-field-input data-field-name data-status="field--inactive")

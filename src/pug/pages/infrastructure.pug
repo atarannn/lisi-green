@@ -28,7 +28,7 @@ block scripts
   script(defer src='./assets/scripts/parallax-animation.js')
   script(defer src='./assets/scripts/infrastructure.js')
 block content
-  .first-screen.border-top.border-right.border-bottom.border-left.grid-16-8
+  .first-screen.border-top.border-right.border-bottom.border-left.grid-16-8.mob-border-bottom.mob-border-top.mob-border-left.mob-border-right
     .grid-16.border-right.relative
       img(src="assets/images/infrastructure/1.jpg" alt="img")
       .first-screen-text
@@ -36,7 +36,7 @@ block content
     .grid-8.first-screen-right
       .first-screen-right-logo
         img(src="assets/images/first-screen-logo.svg" alt="svg")
-  .infrastructure-screen.border-bottom.border-right.border-left
+  .infrastructure-screen.border-bottom.border-right.border-left.mob-border-left.mob-border-right.mob-border-bottom
     .map(width="960px" height="900px")
       #map(width="960px" height="900px")
       .infastructure-markers__wrapper
@@ -69,36 +69,36 @@ block content
           li(data-marker data-type="sports" data-category="sports")
             img(src="assets/images/infrastructure/acardeon/8.svg")
             span.light-text Sports and culture
-  section.advantages-screen.border-left.border-right.padding300-top
-    .advantages-1.relative.border-top.border-right.border-bottom
+  section.advantages-screen.border-left.border-right.padding300-top.mob-border-left.mob-border-right.mob-border-bottom
+    .advantages-1.relative.border-top.border-right.border-bottom.mob-border-top
       img(src="assets/images/advantages-screen/1.jpg")
       .dark-text.top--first-text We care about the environment and in order to minimize its pollution solar power batteries have been installed here, which will give light in public spaces, entrances, parking and landscaped paths.
     .advantages-title.relative
       .title WHY DID YOU CHOOSE LISI GREEN URBAN?
       .advantages-title-logo
         img(src="assets/images/advantages-screen/logo.svg")
-    .advantages-2.relative.border-top.border-bottom.border-right
+    .advantages-2.relative.border-top.border-bottom.border-right.mob-border-top.mob-border-right
       img(src="assets/images/advantages-screen/2.jpg")
       .dark-text.bottom-text 92 Indoor parking
-    .advantages-3.relative.border-top.border-bottom
+    .advantages-3.relative.border-top.border-bottom.mob-border-top
       img(src="assets/images/advantages-screen/3.jpg")
       .dark-text.bottom-text Event Room
-    .advantages-4.border-bottom.border-right.relative
+    .advantages-4.border-bottom.border-right.relative.mob-border-top.mob-border-right
       img(src="assets/images/advantages-screen/4.jpg")
       .dark-text.bottom-text.width-45 We promote a healthy lifestyle, that's why you can practice near home.
-    .advantages-5.relative.border-bottom
+    .advantages-5.relative.border-bottom.mob-border-top
       img(src="assets/images/advantages-screen/5.jpg")
       .light-text.bottom-text Bicycle lane and Walking alley
-    .advantages-6.relative.border-bottom
+    .advantages-6.relative.border-bottom.mob-border-top
       img(src="assets/images/advantages-screen/6.jpg")
       .light-text.bottom-text.width-40  Green yard (with squirrels, hedgehogs, rabbits on the territory)
-    .advantages-7.relative.border-bottom.border-right
+    .advantages-7.relative.border-bottom.border-right.mob-border-top.mob-border-right
       img(src="assets/images/advantages-screen/7.jpg")
       .light-text.bottom-text Different entrance
-    .advantages-8.relative.border-bottom
+    .advantages-8.relative.border-bottom.mob-border-top
       img(src="assets/images/advantages-screen/8.jpg")
       .light-text.top-text Gazebo and Hammocks
-    .advantages-9.relative.border-bottom.border-left
+    .advantages-9.relative.border-bottom.border-left.mob-border-top
       img(src="assets/images/advantages-screen/9.jpg")
       .light-text.bottom-text.width-60 Arranged Separate playground for children
 

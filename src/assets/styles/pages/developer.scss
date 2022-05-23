@@ -4,10 +4,17 @@
   padding-bottom: var(--offset150);
   padding-left: var(--field);
   padding-right: var(--field);
+  @include to(1024px) {
+    padding: 80px 39px;
+  }
   .grid-12-left {
     padding-right: 177px;
     @include to(1600px) {
       padding-right: 135px;
+    }
+    @include to(1024px) {
+      padding-right: 0;
+      margin-bottom: 50px;
     }
   }
   &-list {
@@ -40,6 +47,20 @@
       margin-bottom: 40px;
       @include to(1600px) {
         margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+.class-page-developer {
+  @include to(1024px) {
+    .developer-screen-3.grid-16-8 {
+      height: auto;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      .grid-16 {
+        width: 100%;
       }
     }
   }
