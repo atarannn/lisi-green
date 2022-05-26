@@ -1,7 +1,7 @@
 .header {
   position: fixed;
+  width: 100%;
   left: 0;
-  right: 0;
   z-index: 10;
   transition: all 0.3s ease-in-out;
   padding-top: 68px;
@@ -20,6 +20,13 @@
     grid-template-columns: 7px repeat(22, 1fr) 7px;
     grid-template-areas:
     ". header-left header-left header-left header-left header-left header-left header-left header-left header-left header-left header-left header-left . . . header-right header-right header-right header-right header-right header-right header-right .";
+  }
+  @include to(575px) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 6px var(--field);
+    background: #00B09CCC;
   }
   &.not-on-top {
     background: #00B09CCC;
@@ -43,11 +50,17 @@
     @include to(1024px) {
       padding-right: 0;
     }
+    @include to(575px) {
+      width: 100%;
+    }
     &-logo {
       img {
         height: var(--logo-h);
         width: var(--logo-w);
         transition: all 0.2s ease-in-out;
+      }
+      @include to(575px) {
+        margin-right: auto;
       }
     }
     &-lang {
@@ -58,6 +71,17 @@
       .header-text {
         @include from(1023px) {
           cursor: pointer;
+        }
+      }
+      @include to(575px) {
+        li {
+          height: 16px;
+          .header-text.cubic-hover.active {
+            text-decoration: underline;
+          }
+          .header-text {
+            font-size: 12px;
+          }
         }
       }
     }
@@ -110,12 +134,24 @@
             width: 22px;
           }
         }
+        @include to(575px) {
+          width: 16px;
+          span {
+            width: 16px;
+          }
+        }
         span {
           background-color: $wc;
           height: 2px;
           width: 30px;
           &:last-child {
             margin-top: 5px;
+            @include to(575px) {
+              margin-top: 3px;
+            }
+          }
+          @include to(575px) {
+            height: 1.5px;
           }
         }
         .first-line {
@@ -125,6 +161,10 @@
           margin-right: auto;
           @include to(1440px) {
             width: 11px;
+          }
+          @include to(575px) {
+            margin-bottom: 3px;
+            width: 8px;
           }
         }
       }
@@ -154,6 +194,39 @@
         transition: transform .3s ease-in-out;
       }
     }
+  }
+}
+@include to(575px) {
+  .header-3d-mob {
+    border-radius: 100%;
+    background-color: $bc;
+    height: var(--btn);
+    width: var(--btn);
+    position: relative;
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'BPG';
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 100%;
+      color: $wc;
+      text-transform: uppercase;
+      text-align: left;
+    }
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 17px;
+      height: 16px;
+    }
+  }
+  .header-mob-margin {
+    margin-left: 14px;
   }
 }
 .header-text {

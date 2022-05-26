@@ -1,28 +1,30 @@
 header.header
     .header-left
         a(href='#').header-left-logo
-          picture
-            source(media="(max-width: 575px)" srcset="assets/images/lisi-green-urban.svg")
             img(src="assets/images/lisi-green-urban.svg")
         ul.header-left-lang
             li
                 a(href="#" data-text="GEO").header-text.cubic-hover
                     span GEO
             li
-                a(href="#" data-text="ENG").header-text.cubic-hover
+                a(href="#" data-text="ENG").header-text.cubic-hover.active
                     span ENG
-        a(href="#").header-3d
+        a(href="#").header-3d.desktop-2
             +svg('arrow')
             .column
                 .header-text 3D
                 .header-text Tour
     .header-right
-        a(href="#").header-3d
+        a(href="#").header-3d.desktop-2
             +svg('arrow')
             .column
                 .header-text Choose an
                 .header-text apartment
-        .header-right-close(data-open-menu).circle-animation
+        a(href="#").header-3d-mob.mobile-2.header-mob-margin
+            span 3D
+        a(href="#").header-3d-mob.mobile-2.header-mob-margin
+            img(src="assets/images/icons/apartment.svg")
+        .header-right-close(data-open-menu).circle-animation.header-mob-margin
             .line-wrapper
                 span.first-line
                 span

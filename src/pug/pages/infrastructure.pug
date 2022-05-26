@@ -28,9 +28,11 @@ block scripts
   script(defer src='./assets/scripts/parallax-animation.js')
   script(defer src='./assets/scripts/infrastructure.js')
 block content
-  .first-screen.border-top.border-right.border-bottom.border-left.grid-16-8.mob-border-bottom.mob-border-top.mob-border-left.mob-border-right
-    .grid-16.border-right.relative
-      img(src="assets/images/infrastructure/1.jpg" alt="img")
+  .first-screen.border-top.border-right.border-bottom.border-left.grid-16-8.mob-border-top.mob-border-left.mob-border-right
+    .grid-16.border-right.mob-border-bottom.relative
+      picture
+        source(srcset="assets/images/infrastructure/1.jpg" media="(min-width: 575px)")
+        img(src="assets/images/infrastructure/1-mob.jpg" alt="img")
       .first-screen-text
         .title= title_page
     .grid-8.first-screen-right
@@ -90,6 +92,7 @@ block content
       img(src="assets/images/advantages-screen/5.jpg")
       .light-text.bottom-text Bicycle lane and Walking alley
     .advantages-6.relative.border-bottom.mob-border-top
+      .linear-gradient.mobile-2
       img(src="assets/images/advantages-screen/6.jpg")
       .light-text.bottom-text.width-40  Green yard (with squirrels, hedgehogs, rabbits on the territory)
     .advantages-7.relative.border-bottom.border-right.mob-border-top.mob-border-right

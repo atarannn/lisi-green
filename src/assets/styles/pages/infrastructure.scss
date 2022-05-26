@@ -21,6 +21,10 @@
           width: 30px;
           height: 30px;
         }
+        @include to(575px) {
+          width: 21.67px;
+          height: 26px;
+        }
       }
       .light-text {
         margin-left: 30px;
@@ -42,6 +46,11 @@
         @include to(1600px) {
           width: 310px;
           height: 56px;
+        }
+        @include to(575px) {
+          width: 280px;
+          height: 36px;
+          padding-left: 26px;
         }
         &:first-child {
           margin-top: 3px;
@@ -67,6 +76,10 @@
       height: 50px;
       width: 50px;
       cursor: pointer;
+      @include to(575px) {
+        height: 36px;
+        width: 36px;
+      }
       .rotate {
         transform: rotate(180deg);
         transition: transform .2s linear;

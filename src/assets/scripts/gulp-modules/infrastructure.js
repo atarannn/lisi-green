@@ -159,11 +159,11 @@ window.addEventListener("load", () => {
     const markersHeight = getComputedStyle(
         document.querySelector(".infrastructure-markers__ul")
     ).height;
-    if (document.documentElement.clientWidth < 575) {
-        legend.classList.remove("opened");
-        gsap.timeline().fromTo(legend, { y: 0 }, { y: markersHeight });
-        gsap.timeline().fromTo(legendTitle, {y: 0}, {y: markersHeight});
-    }
+    // if (document.documentElement.clientWidth < 575) {
+    //     legend.classList.remove("opened");
+    //     gsap.timeline().fromTo(legend, { y: 0 }, { y: markersHeight });
+    //     gsap.timeline().fromTo(legendTitle, {y: 0}, {y: markersHeight});
+    // }
 
     legendTitle.addEventListener("click", () => {
         const legendWrapper = document.querySelector('.infastructure-markers__wrapper');

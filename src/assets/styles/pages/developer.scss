@@ -7,6 +7,9 @@
   @include to(1024px) {
     padding: 80px 39px;
   }
+  @include to(575px) {
+    padding: 80px var(--field);
+  }
   .grid-12-left {
     padding-right: 177px;
     @include to(1600px) {
@@ -42,6 +45,7 @@
 }
 
 .developer-screen-2, .developer-screen-3 {
+  height: auto;
   .light-text {
     &:first-child {
       margin-bottom: 40px;

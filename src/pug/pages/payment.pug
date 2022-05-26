@@ -21,9 +21,11 @@ block scripts
   script(defer src='./assets/scripts/text-animation.js')
   script(defer src='./assets/scripts/parallax-animation.js')
 block content
-  .first-screen.border-top.border-right.border-bottom.border-left.grid-16-8.mob-border-bottom.mob-border-top.mob-border-right.mob-border-left
-    .grid-16.border-right.relative
-      img(src="assets/images/payment/1.jpg" alt="img")
+  .first-screen.border-top.border-right.border-bottom.border-left.grid-16-8.mob-border-top.mob-border-right.mob-border-left
+    .grid-16.border-right.mob-border-bottom.relative
+      picture
+        source(srcset="assets/images/payment/1.jpg" media="(min-width: 575px)")
+        img(src="assets/images/payment/1-mob.jpg" alt="img")
       .first-screen-text
         .title= title_page
     .grid-8.first-screen-right

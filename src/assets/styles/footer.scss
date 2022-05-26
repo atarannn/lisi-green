@@ -12,6 +12,9 @@ footer {
     @include to(1600px) {
       width: 656px;
     }
+    @include to(575px) {
+      width: auto;
+    }
   }
 }
 .footer {
@@ -32,6 +35,14 @@ footer {
     grid-template-areas:
             ". . . . . . . . . . . . . . . pageup pageup . . . . . . ."
             "footer-menu footer-menu footer-menu footer-menu footer-menu footer-menu footer-menu footer-menu footer-menu footer-menu footer-menu footer-menu footer-menu footer-menu . footer-links footer-links footer-links footer-links footer-links footer-links footer-links footer-links .";
+  }
+  @include to(575px) {
+    padding: 80px 0;
+    grid-template-columns: var(--field) repeat(6, 1fr) var(--field);
+    gap: 80px 0;
+    grid-template-areas:
+            ". footer-menu footer-menu footer-menu footer-menu footer-menu . ."
+            ". footer-links footer-links footer-links footer-links footer-links  pageup ."
   }
   &-menu {
     z-index: 1;
@@ -97,6 +108,12 @@ footer {
     grid-template-areas:
           "footer-bottom-text footer-bottom-text footer-bottom-text footer-bottom-text footer-bottom-text footer-bottom-text footer-bottom-text footer-bottom-text footer-bottom-text footer-bottom-text footer-bottom-text footer-bottom-text footer-bottom-text footer-bottom-text footer-bottom-text footer-bottom-text footer-bottom-text footer-bottom-text footer-bottom-text footer-bottom-text footer-bottom-text smarto smarto .";
   }
+  @include to(575px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px 0 var(--field);
+  }
   &-text {
     z-index: 1;
     grid-area: footer-bottom-text;
@@ -111,6 +128,9 @@ footer {
     @include to(1024px) {
       align-self: center;
     }
+    @include to(575px) {
+      font-size: 12px;
+    }
   }
   .smarto {
     z-index: 1;
@@ -118,6 +138,9 @@ footer {
     width: var(--btn);
     @include to(1024px) {
       width: auto;
+    }
+    @include to(575px) {
+      width: 57px;
     }
   }
 }

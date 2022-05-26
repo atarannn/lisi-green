@@ -32,6 +32,9 @@
     flex-direction: column;
     align-items: flex-start;
   }
+  @include to(575px) {
+    padding: 80px var(--field);
+  }
 }
 .concept-screen-2 {
   background-color: $blue;
@@ -56,6 +59,9 @@
   padding: 0 var(--field);
   @include to(1024px) {
     padding: 80px 39px;
+  }
+  @include to(575px) {
+    padding: 50px var(--field);
   }
 }
 .concept-text {

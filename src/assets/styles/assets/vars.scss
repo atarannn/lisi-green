@@ -63,6 +63,7 @@ $mint: #00B09C;
 
 @media screen and (max-width: 1024px) {
   :root {
+    --header-footer-font: 16px;
     --title-font: 64px;
 
     --offset300: 150px;
@@ -74,5 +75,26 @@ $mint: #00B09C;
     --logo-h2: 62px;
     --logo-w: 120px;
     --logo-w2: 120px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  :root {
+    --font36: 16px;
+    --font64: 24px;
+    --title-font: 36px;
+
+    --offset150: 80px;
+    --field: 17px;
+
+    --logo-h: 47.53px;
+    --logo-w: 92px;
+    --btn: 36px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  :root {
+    --title-font: 28px;
   }
 }

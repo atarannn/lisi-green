@@ -8,6 +8,9 @@
       @include to(1024px) {
         margin-bottom: 50px;
       }
+      @include to(575px) {
+        margin-bottom: 40px;
+      }
     }
   }
   .grid-8-8-16 {
@@ -28,12 +31,20 @@
       grid-template-areas:
     ". . . . . . . . . . . . grid-8 grid-8 grid-8 grid-8 grid-8 grid-8 grid-8 grid-8 grid-8 grid-8 grid-8 grid-8";
     }
+    @include to(575px) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
   }
   .map-head-wrapper {
     grid-area: grid-8;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    @include to(575px) {
+      width: 100%;
+    }
     .map-head-marker {
       height: 150px;
       min-width: 150px;
@@ -54,6 +65,14 @@
           height: 40px;
         }
       }
+      @include to(575px) {
+        height: 60px;
+        min-width: 60px;
+        img {
+          width: 24px;
+          height: 30px;
+        }
+      }
     }
     .map-head-text {
       height: 150px;
@@ -72,6 +91,12 @@
       @include to(1024px) {
         padding-right: 55px;
       }
+      @include to(575px) {
+        height: 60px;
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 0;
+      }
     }
   }
   .map {
@@ -83,11 +108,17 @@
     @include to(1600px) {
       height: 695px;
     }
+    @include to(575px) {
+      height: 650px;
+    }
   }
   form {
     height: 100%;
     position: static;
     width: 100%;
+    @include to(575px) {
+      padding: 72px var(--field);
+    }
   }
   @include to(1024px) {
     .grid-8-16 {
@@ -119,6 +150,9 @@
     @include to(1600px) {
       margin-left: 20px;
     }
+    @include to(575px) {
+      margin-left: 10px;
+    }
   }
 }
 .contacts-right-info {
@@ -144,9 +178,31 @@
     justify-content: space-between;
     &-right {
       margin-left: 173px;
+      @include to(575px) {
+        margin-left: 0;
+        margin-top: 40px;
+      }
       .light-text {
         margin-bottom: 10px;
       }
+    }
+    @include to(575px) {
+      flex-direction: column;
+    }
+  }
+}
+
+#id-page-contacts .grid-8-16.contacts-screen {
+  @include to(575px) {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    .grid-8 {
+      width: 100%;
+      border-right: none;
+      border-top: 3px solid $wc;
     }
   }
 }

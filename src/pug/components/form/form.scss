@@ -10,14 +10,24 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  .title {
+    z-index: 1;
+  }
   .menu-close {
     top: 28px;
     right: calc((-1)*(80px + 28px));
+    @include to(1024px) {
+      top: 35px;
+      right: var(--field);
+    }
   }
   &-logo {
     position: absolute;
     right: 0;
     bottom: 0;
+    @include to(1024px) {
+      bottom: -100px;
+    }
   }
   &.active {
     visibility: visible;
@@ -38,6 +48,9 @@
     text-align: left;
     margin: var(--offset50) 0 60px;
     z-index: 102;
+    @include to(1024px) {
+      text-align: center;
+    }
   }
   .arrow-back {
     display: flex;
@@ -45,6 +58,10 @@
     justify-content: flex-start;
     margin-right: auto;
     z-index: 102;
+    @include to(1024px) {
+      justify-content: center;
+      margin-right: 0;
+    }
     svg {
       height: 40px;
       width: 40px;
@@ -89,9 +106,22 @@ form {
   align-items: stretch;
   justify-content: center;
   position: absolute;
+  @include to(1024px) {
+    width: 100%;
+  }
   .menu-close {
     top: 28px;
     right: calc((-1)*(80px + 28px));
+    @include to(1024px) {
+      top: 35px;
+      right: var(--field);
+      background-color: $wc;
+      .line-wrapper {
+        span {
+          background-color: $bc;
+        }
+      }
+    }
   }
   &.not-active {
     transition: all 0.3s ease-in-out;
@@ -190,6 +220,9 @@ form {
   @include to(1600px) {
     height: 60px;
   }
+  @include to(575px) {
+    height: 50px;
+  }
 }
 .form-field__input {
   width: 100%;
@@ -207,6 +240,9 @@ form {
   @include to(1600px) {
     height: 60px;
     padding-left: 19px;
+  }
+  @include to(575px) {
+    height: 50px;
   }
   &::placeholder {
     color: $bc;
@@ -332,6 +368,9 @@ form {
     @include to(1600px) {
       padding: 19px;
       height: 100px;
+    }
+    @include to(575px) {
+      height: 90px;
     }
     &::placeholder {
       color: $bc;

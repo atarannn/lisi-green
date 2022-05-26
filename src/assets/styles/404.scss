@@ -8,6 +8,14 @@
     .header-left-logo img {
       height: var(--logo-h2);
       width: var(--logo-w2);
+      @include to(575px) {
+        height: var(--logo-h);
+        width: var(--logo-w);
+      }
+    }
+    @include to(575px) {
+      padding: 6px var(--field);
+      border: none;
     }
   }
 }
@@ -28,6 +36,9 @@
       height: 475px;
       left: 50%;
       transform: translateX(-50%);
+    }
+    @include to(575px) {
+      height: 250px;
     }
   }
   .grid-8 {
@@ -79,16 +90,26 @@
         flex-direction: column;
         align-items: center;
       }
+      @include to(575px) {
+        margin: 98px var(--field) 0;
+      }
       .head-screen-title {
         margin-bottom: var(--offset50);
         @include to(1024px) {
           margin-bottom: 40px;
+        }
+        @include to(575px) {
+          margin-bottom: 20px
         }
       }
       .concept-text {
         margin: 10px 0 var(--offset50);
         @include to(1024px) {
           margin: 10px 0 40px;
+          text-align: center;
+        }
+        @include to(575px) {
+          margin: 10px 0 20px;
         }
       }
       .link-wrap {
@@ -97,9 +118,16 @@
         justify-content: flex-start;
         .header-3d {
           margin-right: 60px;
+          &:last-child {
+            margin-right: 0;
+          }
           @include to(1600px) {
             margin-right: 35px;
           }
+        }
+        @include to(1024px) {
+          width: 100%;
+          justify-content: center;
         }
       }
     }

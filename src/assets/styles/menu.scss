@@ -17,6 +17,9 @@
     @include to(1024px) {
       padding: 39px 0 0 10px;
     }
+    @include to(575px) {
+      padding: 26px 0 0 var(--field);
+    }
     ul {
       height: 100%;
       display: flex;
@@ -39,6 +42,10 @@
         width: 656px;
         height: 436px;
       }
+      @include to(575px) {
+        width: auto;
+        height: auto;
+      }
     }
   }
   &-right {
@@ -60,6 +67,9 @@
           @include to(1600px) {
             margin-top: 12px;
           }
+          @include to(575px) {
+            margin-top: 6px;
+          }
         }
         @include to(1600px) {
           top: var(--offset50);
@@ -68,6 +78,10 @@
         @include to(1024px) {
           top: 30px;
           left: 36px;
+        }
+        @include to(575px) {
+          top: 20px;
+          left: var(--field);
         }
       }
     }
@@ -91,6 +105,11 @@
   @include from(1023px) {
     cursor: pointer;
   }
+  @include to(575px) {
+    top: 10px;
+    right: var(--field);
+
+  }
   .line-wrapper {
     position: relative;
     height: 100%;
@@ -107,10 +126,17 @@
       @include to(1440px) {
         width: 22px;
       }
+      @include to(575px) {
+        width: 16px;
+        height: 1.5px;
+      }
     }
     .first-line {
       margin-bottom: -2px;
       transform: rotate(-45deg);
+      @include to(575px) {
+        margin-bottom: -1.5px;
+      }
     }
   }
 }

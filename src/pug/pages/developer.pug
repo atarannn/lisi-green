@@ -58,9 +58,11 @@ block scripts
   script(defer src='./assets/scripts/text-animation.js')
   script(defer src='./assets/scripts/parallax-animation.js')
 block content
-  .first-screen.border-top.border-right.border-bottom.border-left.grid-16-8.mob-border-bottom.mob-border-top.mob-border-right.mob-border-left
-    .grid-16.border-right.relative
-      img(src="assets/images/developer/1.jpg" alt="img")
+  .first-screen.border-top.border-right.border-bottom.border-left.grid-16-8.mob-border-top.mob-border-right.mob-border-left
+    .grid-16.border-right.mob-border-bottom.relative
+      picture
+        source(srcset="assets/images/developer/1.jpg" media="(min-width: 575px)")
+        img(src="assets/images/developer/1-mob.jpg" alt="img")
       .first-screen-text
         .title= title_page
     .grid-8.first-screen-right
@@ -81,7 +83,7 @@ block content
     .grid-16.mob-border-bottom
       img(src="assets/images/developer/2.jpg" alt="img").mobile-img-h
   .developer-screen-3.border-right.border-left.border-bottom.grid-16-8.mob-border-bottom.mob-border-right.mob-border-left
-    .grid-8.border-right.concept-text-wrapper
+    .grid-8.border-left.concept-text-wrapper
       .light-text Besides the abovementioned projects, the group participated in the developing projects in the different European cities.
       .light-text Nowadays the group successfully manages 600 m2 -business center “Green Office” being in its ownership on #154 Agmashenebeli avenue, Tbilisi.
     .grid-16.mob-border-bottom
