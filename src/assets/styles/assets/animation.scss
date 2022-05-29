@@ -80,6 +80,7 @@
 .circle-animation {
 	@include from(1023px) {
 		overflow: hidden;
+		transform: translateZ(0);
 		&:before {
 			content: '';
 			background: $bc;
