@@ -4,7 +4,9 @@ import axios from 'axios';
 import * as yup from 'yup';
 import FormMonster from '../../pug/components/form/form';
 import SexyInput from '../../pug/components/input/input';
-import ScrollTrigger from 'gsap/ScrollTrigger';;
+import ScrollTrigger from 'gsap/ScrollTrigger';
+import galleryEffect from './modules/gallery-effect';
+;
 
 global.gsap = gsap;
 global.ScrollTrigger = ScrollTrigger;
@@ -146,3 +148,8 @@ formContacts.forEach((form) => {
     });
   }
 });
+
+
+if (window.location.href.match(/gallery/)) {
+  galleryEffect();
+}

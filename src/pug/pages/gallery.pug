@@ -19,28 +19,140 @@ block scripts
   script(defer src='./assets/scripts/header.js')
   script(defer src='./assets/scripts/gallery.js')
 block content
-  .gallery-wrapper
-    .gallery-container
-      .gallery-column.left-right-column
-        .gallery-column-img
-          img(src="assets/images/gallery/1.jpg" alt="gallery")
-        .gallery-column-img
-          img(src="assets/images/gallery/2.jpg" alt="gallery")
-        .gallery-column-img
-          img(src="assets/images/gallery/1.jpg" alt="gallery")
-      .gallery-column.middle-column
-        .gallery-column-img
-          img(src="assets/images/gallery/3.jpg" alt="gallery")
-        .gallery-column-img
-          img(src="assets/images/gallery/4.jpg" alt="gallery")
-        .gallery-column-img
-          img(src="assets/images/gallery/3.jpg" alt="gallery")
-      .gallery-column.left-right-column
-        .gallery-column-img
-          img(src="assets/images/gallery/5.jpg" alt="gallery")
-        .gallery-column-img
-          img(src="assets/images/gallery/6.jpg" alt="gallery")
-        .gallery-column-img
-          img(src="assets/images/gallery/5.jpg" alt="gallery")
+  .gallery-wrapper 
+    .gallery-container.columns(data-scroll-container)
+      .gallery-column.left-right-column.column-wrap.column-wrap--height
+        .column
+          .gallery-column-img.column__item
+            .column__item-imgwrap(data-pos="2")
+              img(src="assets/images/gallery/1.jpg" alt="gallery").column__item-img
+          .gallery-column-img.column__item
+            .column__item-imgwrap(data-pos="3")
+              img(src="assets/images/gallery/2.jpg" alt="gallery").column__item-img
+          .gallery-column-img.column__item
+            .column__item-imgwrap(data-pos="4")
+              img(src="assets/images/gallery/1.jpg" alt="gallery").column__item-img
+          .gallery-column-img.column__item
+            .column__item-imgwrap(data-pos="5")
+              img(src="assets/images/gallery/1.jpg" alt="gallery").column__item-img
+          .gallery-column-img.column__item
+            .column__item-imgwrap(data-pos="6")
+              img(src="assets/images/gallery/2.jpg" alt="gallery").column__item-img
+          .gallery-column-img.column__item
+            .column__item-imgwrap(data-pos="7")
+              img(src="assets/images/gallery/1.jpg" alt="gallery").column__item-img
+          .gallery-column-img.column__item
+            .column__item-imgwrap(data-pos="8")
+              img(src="assets/images/gallery/1.jpg" alt="gallery").column__item-img
+          .gallery-column-img.column__item
+            .column__item-imgwrap(data-pos="9")
+              img(src="assets/images/gallery/2.jpg" alt="gallery").column__item-img
+      .gallery-column.middle-column.column-wrap
+        .column(data-scroll-section)
+          .gallery-column-img.column__item
+            .column__item-imgwrap(data-pos="11")
+              img(src="assets/images/gallery/3.jpg" alt="gallery").column__item-img
+          .gallery-column-img.column__item
+            .column__item-imgwrap(data-pos="12")
+              img(src="assets/images/gallery/4.jpg" alt="gallery").column__item-img
+          .gallery-column-img.column__item
+            .column__item-imgwrap(data-pos="13")
+              img(src="assets/images/gallery/3.jpg" alt="gallery").column__item-img
+          .gallery-column-img.column__item
+            .column__item-imgwrap(data-pos="14")
+              img(src="assets/images/gallery/3.jpg" alt="gallery").column__item-img
+          .gallery-column-img.column__item
+            .column__item-imgwrap(data-pos="15")
+              img(src="assets/images/gallery/4.jpg" alt="gallery").column__item-img
+          .gallery-column-img.column__item
+            .column__item-imgwrap(data-pos="16")
+              img(src="assets/images/gallery/3.jpg" alt="gallery").column__item-img
+          .gallery-column-img.column__item
+            .column__item-imgwrap(data-pos="17")
+              img(src="assets/images/gallery/3.jpg" alt="gallery").column__item-img
+          .gallery-column-img.column__item
+            .column__item-imgwrap(data-pos="18")
+              img(src="assets/images/gallery/4.jpg" alt="gallery").column__item-img
+      .gallery-column.left-right-column.column-wrap.column-wrap--height
+        .column
+          .gallery-column-img.column__item
+            .column__item-imgwrap(data-pos="20")
+              img(src="assets/images/gallery/5.jpg" alt="gallery").column__item-img
+          .gallery-column-img.column__item
+            .column__item-imgwrap(data-pos="21")
+              img(src="assets/images/gallery/6.jpg" alt="gallery").column__item-img
+          .gallery-column-img.column__item
+            .column__item-imgwrap(data-pos="22")
+              img(src="assets/images/gallery/5.jpg" alt="gallery").column__item-img
+          .gallery-column-img.column__item
+            .column__item-imgwrap(data-pos="23")
+              img(src="assets/images/gallery/5.jpg" alt="gallery").column__item-img
+          .gallery-column-img.column__item
+            .column__item-imgwrap(data-pos="24")
+              img(src="assets/images/gallery/6.jpg" alt="gallery").column__item-img
+          .gallery-column-img.column__item
+            .column__item-imgwrap(data-pos="25")
+              img(src="assets/images/gallery/5.jpg" alt="gallery").column__item-img
+          .gallery-column-img.column__item
+            .column__item-imgwrap(data-pos="26")
+              img(src="assets/images/gallery/5.jpg" alt="gallery").column__item-img
+          .gallery-column-img.column__item
+            .column__item-imgwrap(data-pos="27")
+              img(src="assets/images/gallery/6.jpg" alt="gallery").column__item-img
+  .content
+    .content__item
+    .content__item
+    .content__item
+    .content__item
+    .content__item
+    .content__item
+    .content__item
+    .content__item
+    .content__item
+    .content__item
+    .content__item
+    .content__item
+    .content__item
+    .content__item
+    .content__item
+    .content__item
+    .content__item
+    .content__item
+    .content__item
+    .content__item
+    .content__item
+    .content__item
+    .content__item
+    .content__item
+    nav.content__nav(style='opacity: 1;')
+      .content__nav-wrap
+        .content__nav-item(style='background-image: url("assets/images/gallery/3.jpg"); opacity: 0; transform: translate(0px, 223.042%);')
+        .content__nav-item(style='background-image: url("assets/images/gallery/3.jpg"); opacity: 0; transform: translate(0px, 223.042%);')
+        .content__nav-item(style='background-image: url("assets/images/gallery/3.jpg"); opacity: 0; transform: translate(0px, 223.042%);')
+        .content__nav-item(style='background-image: url("assets/images/gallery/3.jpg"); opacity: 0; transform: translate(0px, 223.042%);')
+        .content__nav-item(style='background-image: url("assets/images/gallery/3.jpg"); opacity: 0; transform: translate(0px, 223.042%);')
+        .content__nav-item(style='background-image: url("assets/images/gallery/3.jpg"); opacity: 0; transform: translate(0px, 223.042%);')
+        .content__nav-item(style='background-image: url("assets/images/gallery/3.jpg"); opacity: 0; transform: translate(0px, 223.042%);')
+        .content__nav-item(style='background-image: url("assets/images/gallery/3.jpg"); opacity: 0; transform: translate(0px, 223.042%);')
+        .content__nav-item(style='background-image: url("assets/images/gallery/3.jpg"); opacity: 0; transform: translate(0px, 223.042%);')
+        .content__nav-item(style='background-image: url("assets/images/gallery/3.jpg"); opacity: 1; transform: translate(0px, 0%);')
+        .content__nav-item(style='background-image: url("assets/images/gallery/3.jpg"); opacity: 1; transform: translate(0px, 0%);')
+        .content__nav-item(style='background-image: url("assets/images/gallery/3.jpg"); opacity: 1; transform: translate(0px, 0%);')
+        .content__nav-item(style='background-image: url("assets/images/gallery/3.jpg"); opacity: 1; transform: translate(0px, 0%);')
+        .content__nav-item(style='background-image: url("assets/images/gallery/3.jpg"); opacity: 1; transform: translate(0px, 0%);')
+        .content__nav-item(style='background-image: url("assets/images/gallery/3.jpg"); opacity: 1; transform: translate(0px, 0%);')
+        .content__nav-item(style='background-image: url("assets/images/gallery/3.jpg"); opacity: 1; transform: translate(0px, 0%);')
+        .content__nav-item(style='background-image: url("assets/images/gallery/3.jpg"); opacity: 1; transform: translate(0px, 0%);')
+        .content__nav-item(style='background-image: url("assets/images/gallery/3.jpg"); opacity: 1; transform: translate(0px, 0%);')
+        .content__nav-item(style='background-image: url("assets/images/gallery/3.jpg"); opacity: 1; transform: translate(0px, 0%);')
+        .content__nav-item(style='background-image: url("assets/images/gallery/3.jpg"); opacity: 1; transform: translate(0px, 0%);')
+        .content__nav-item(style='background-image: url("assets/images/gallery/3.jpg"); opacity: 1; transform: translate(0px, 0%);')
+        .content__nav-item(style='background-image: url("assets/images/gallery/3.jpg"); opacity: 1; transform: translate(0px, 0%);')
+        .content__nav-item(style='background-image: url("assets/images/gallery/3.jpg"); opacity: 1; transform: translate(0px, 0%);')
+        .content__nav-item(style='background-image: url("assets/images/gallery/3.jpg"); opacity: 1; transform: translate(0px, 0%);')
+    button.button-back.unbutton(style='opacity: 1;')
+      svg(viewbox='0 0 50 9')
+        path(d='m0 4.5 5-3m-5 3 5 3m45-3h-77')
+
 block header
   include ../includes/header.pug
