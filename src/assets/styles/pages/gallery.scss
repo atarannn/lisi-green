@@ -13,9 +13,18 @@
         }
       }
     }
+    @include from(1023px) {
+      .cubic-hover:after {
+        color: $wc;
+      }
+    }
   }
 }
-
+.gallery-title {
+  position: absolute;
+  left: 50%;
+  bottom: -110px;
+}
 .gallery-wrapper {
   height: 100vh;
   width: 100%;
@@ -26,7 +35,24 @@
     will-change: transform;
   }
 }
-
+.heading {
+  left: 0;
+  margin: -5vw 0 0;
+  pointer-events: none;
+  position: fixed;
+  transform-origin: 50% 50%;
+  white-space: nowrap;
+  width: 100%;
+  will-change: transform, opacity;
+  z-index: 1000;
+  &.heading--down {
+    bottom: 0;
+    margin-bottom: -6vw;
+    margin-top: 0;
+    top: auto;
+    transform-origin: 50% 50%;
+  }
+}
 .gallery-container {
   display: flex;
   align-items: flex-start;

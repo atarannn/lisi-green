@@ -230,14 +230,14 @@ export default class Grid {
       .set([gridItem.DOM.img.outer, gridItem.DOM.img.inner, this.viewportGridItemsImgOuter], {
         willChange: 'transform, opacity',
       }, 'start')
-    //   .to(this.DOM.heading.top, {
-    //     y: '-200%',
-    //     scaleY: 4,
-    //   }, 'start')
-    //   .to(this.DOM.heading.bottom, {
-    //     y: '200%',
-    //     scaleY: 4,
-    //   }, 'start+=0.05')
+      .to(this.DOM.heading.top, {
+        y: '-200%',
+        scaleY: 4,
+      }, 'start')
+      .to(this.DOM.heading.bottom, {
+        y: '200%',
+        scaleY: 4,
+      }, 'start+=0.05')
       .to(gridItem.DOM.img.outer, {
         scale: imageTransform.scale,
         x: imageTransform.x,
@@ -362,16 +362,15 @@ export default class Grid {
         },
       }, 'start')
 
-
-      .addLabel('showGrid', 'start+=0.2')
-    //   .to([this.DOM.heading.top, this.DOM.heading.bottom], {
-    //     y: '0%',
-    //     scaleY: 1,
-    //   }, 'showGrid')
-    //   .to([this.viewportGridItems.map(gridItem => gridItem.DOM.caption), gridItem.DOM.caption], {
-    //     ease: 'power4.in',
-    //     opacity: 1,
-    //   }, 'showGrid');
+      // .addLabel('showGrid', 'start+=0.2')
+      // .to([this.DOM.heading.top, this.DOM.heading.bottom], {
+      //   y: '0%',
+      //   scaleY: 1,
+      // }, 'showGrid')
+      // .to([this.viewportGridItems.map(gridItem => gridItem.DOM.caption), gridItem.DOM.caption], {
+      //   ease: 'power4.in',
+      //   opacity: 1,
+      // }, 'showGrid');
   }
 
   /**
