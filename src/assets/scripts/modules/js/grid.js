@@ -363,10 +363,10 @@ export default class Grid {
       }, 'start')
 
       // .addLabel('showGrid', 'start+=0.2')
-      // .to([this.DOM.heading.top, this.DOM.heading.bottom], {
-      //   y: '0%',
-      //   scaleY: 1,
-      // }, 'showGrid')
+      .to(this.DOM.heading.bottom, {
+        y: '0%',
+        scaleY: 1,
+      }, 'start')
       // .to([this.viewportGridItems.map(gridItem => gridItem.DOM.caption), gridItem.DOM.caption], {
       //   ease: 'power4.in',
       //   opacity: 1,
