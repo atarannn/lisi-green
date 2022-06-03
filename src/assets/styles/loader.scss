@@ -22,15 +22,14 @@
 }
 
 .preloader__image {
-  animation: pulse 2s ease-in-out both;
+  animation: pulse 2s linear infinite;
   height: auto;
-  width: 300px;
+  width: 200px;
 }
 
 @media screen and (max-width: 575px) {
   .preloader__image {
-    width: 70px;
-    height: 70px;
+    width: 120px;
   }
 }
 
@@ -45,33 +44,17 @@
 
 @-webkit-keyframes pulse {
   from {
-    -webkit-transform: scale3d(1.2, 1.2, 1.2);
-    transform: scale3d(1.2, 1.2, 1.2);
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
   }
 
   50% {
-    -webkit-transform: scale3d(1.45, 1.45, 1.45);
-    transform: scale3d(1.45, 1.45, 1.45);
+    -webkit-transform: scale3d(1.2, 1.2, 1.2);
+    transform: scale3d(1.2, 1.2, 1.2);
   }
 
   to {
-    -webkit-transform: scale3d(1.2, 1.2, 1.2);
-    transform: scale3d(1.2, 1.2, 1.2);
-  }
-}
-@keyframes pulse {
-  from {
-    -webkit-transform: scale3d(1.2, 1.2, 1.2);
-    transform: scale3d(1.2, 1.2, 1.2);
-  }
-
-  50% {
-    -webkit-transform: scale3d(1.45, 1.45, 1.45);
-    transform: scale3d(1.45, 1.45, 1.45);
-  }
-
-  to {
-    -webkit-transform: scale3d(1.2, 1.2, 1.2);
-    transform: scale3d(1.2, 1.2, 1.2);
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
   }
 }
