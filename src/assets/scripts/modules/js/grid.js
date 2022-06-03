@@ -231,11 +231,11 @@ export default class Grid {
         willChange: 'transform, opacity',
       }, 'start')
       .to(this.DOM.heading.top, {
-        y: '-200%',
+        y: '-500%',
         scaleY: 4,
       }, 'start')
       .to(this.DOM.heading.bottom, {
-        y: '200%',
+        y: '500%',
         scaleY: 4,
       }, 'start+=0.05')
       .to(gridItem.DOM.img.outer, {
