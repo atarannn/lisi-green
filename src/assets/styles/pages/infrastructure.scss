@@ -33,10 +33,10 @@
         }
       }
       li[data-category="main"] {
+        pointer-events: none;
         @include from(1023px) {
           &:hover {
             background-color: $mint;
-            pointer-events: none;
           }
         }
       }
