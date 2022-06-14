@@ -6,7 +6,7 @@ import FormMonster from '../../pug/components/form/form';
 import SexyInput from '../../pug/components/input/input';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import galleryEffect from './modules/gallery-effect';
-;
+
 
 global.gsap = gsap;
 global.ScrollTrigger = ScrollTrigger;
@@ -100,6 +100,37 @@ formContacts.forEach((form) => {
         $form,
         showSuccessMessage: false,
         successAction: () => {
+          function thanks(callSelector, contentToOpenSelector, contentToCloseSelector) {
+            const submitBtn = document.querySelectorAll(callSelector);
+            const thanksPopupOpen = document.querySelector(contentToOpenSelector);
+            const thanksPopupClose = document.querySelector(contentToCloseSelector);
+            console.log(submitBtn);
+            // submitBtn.addEventListener('click', () => {
+            //   console.log('click');
+            //   thanksPopupOpen.classList.add('active');
+            // });
+            submitBtn.forEach(el => {
+              thanksPopupOpen.classList.add('active');
+              const tl = gsap.timeline({ paused: true });
+              tl.set(thanksPopupOpen, { autoAlpha: 0 });
+              tl.fromTo(thanksPopupOpen,
+                  {autoAlpha: 0},
+                  {autoAlpha: 1, duration: 0.4}, '<');
+              tl.play();
+              document.querySelector('body').style.overflow = 'hidden';
+            });
+            thanksPopupClose.addEventListener('click', () => {
+              thanksPopupOpen.classList.remove('active');
+              const tl = gsap.timeline({ paused: true });
+              tl.fromTo(thanksPopupOpen,
+                  { autoAlpha: 1},
+                  { autoAlpha: 0, duration: 0.4, clearProps: 'all' }, '<');
+              tl.set(thanksPopupOpen, { autoAlpha: 0 });
+              tl.play();
+              document.querySelector('body').style.overflow = 'auto';
+            });
+          }
+          thanks('.submit-btn','.contacts-thanks-wrap', '[data-close-contacts-thanks]');
           },
         $btnSubmit: $form.querySelector('[data-btn-submit]'),
         fields: {

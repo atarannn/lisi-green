@@ -15,7 +15,7 @@ const lang = langDetect();
     lng: lang, // Текущий язык
     debug: true,
     resources: {
-      geo: {
+      ge: {
         translation: {
           name: 'სახელი:*',
           send: 'გაგზავნე შეტყობინება',

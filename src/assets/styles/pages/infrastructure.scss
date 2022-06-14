@@ -32,6 +32,13 @@
           margin-left: 22px;
         }
       }
+      li[data-category="main"] {
+        @include from(1023px) {
+          &:hover {
+            background-color: $mint;
+          }
+        }
+      }
       li {
         display: flex;
         align-items: center;
