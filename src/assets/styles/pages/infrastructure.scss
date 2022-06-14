@@ -36,6 +36,7 @@
         @include from(1023px) {
           &:hover {
             background-color: $mint;
+            pointer-events: none;
           }
         }
       }
