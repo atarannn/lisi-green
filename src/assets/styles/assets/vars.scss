@@ -38,7 +38,7 @@ $mint: #00B09C;
     --font24: 16px;
     --font36: 24px;
     --font64: 45px;
-    --title-font: 82px;
+    --title-font: 86px;
     --geo-font: 82px;
 
 
@@ -60,7 +60,6 @@ $mint: #00B09C;
 
 @media screen and (max-width: 1440px) {
   :root {
-    --title-font: 78px;
     --geo-font: 78px;
     --btn: 60px;
   }

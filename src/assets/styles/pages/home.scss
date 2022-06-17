@@ -578,7 +578,7 @@ section {
   }
   .grid-10-12 .grid-10.location-screen-mobile{
     position: sticky;
-    top: 100px;
+    top: 150px;
     height: max-content;
     @include to(1024px) {
       position: static;

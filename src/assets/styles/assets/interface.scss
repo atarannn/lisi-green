@@ -255,16 +255,16 @@
 }
 
 .first-screen {
-	height: 100%;
+	height: 70vh;
+	overflow: hidden;
+	@include to(575px) {
+		height: 75vh;
+	}
 	&.grid-16-8 {
 		@include to(1024px) {
-			height: 70vh;
-			grid-template-rows: 1fr;
+			grid-template-rows: 100%;
 			grid-template-areas:
         "grid-16 grid-16 grid-16 grid-16 grid-16 grid-16 grid-16 grid-16 grid-16 grid-16 grid-16 grid-16 grid-16 grid-16 grid-16 grid-16 grid-16 grid-16 grid-16 grid-16 grid-16 grid-16 grid-16 grid-16";
-		}
-		@include to(575px) {
-			height: 75vh;
 		}
 	}
 	.grid-16 {
