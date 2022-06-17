@@ -14,6 +14,7 @@ $mint: #00B09C;
   --font36: 36px;
   --font64: 64px;
   --title-font: 120px;
+  --geo-font: 100px;
 
   --offset300: 300px;
   --offset150: 150px;
@@ -37,7 +38,9 @@ $mint: #00B09C;
     --font24: 16px;
     --font36: 24px;
     --font64: 45px;
-    --title-font: 86px;
+    --title-font: 82px;
+    --geo-font: 82px;
+
 
     --offset300: 215px;
     --offset150: 110px;
@@ -57,6 +60,8 @@ $mint: #00B09C;
 
 @media screen and (max-width: 1440px) {
   :root {
+    --title-font: 78px;
+    --geo-font: 78px;
     --btn: 60px;
   }
 }
@@ -65,6 +70,7 @@ $mint: #00B09C;
   :root {
     --header-footer-font: 16px;
     --title-font: 64px;
+    --geo-font: 64px;
 
     --offset300: 150px;
     --offset150: 160px;
@@ -83,6 +89,7 @@ $mint: #00B09C;
     --font36: 16px;
     --font64: 24px;
     --title-font: 36px;
+    --geo-font: 36px;
 
     --offset150: 80px;
     --field: 17px;
@@ -96,5 +103,6 @@ $mint: #00B09C;
 @media screen and (max-width: 360px) {
   :root {
     --title-font: 28px;
+    --geo-font: 28px;
   }
 }

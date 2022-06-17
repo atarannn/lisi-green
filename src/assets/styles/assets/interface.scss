@@ -195,6 +195,23 @@
 	color: $wc;
 	text-align: left;
 	text-transform: uppercase;
+	&.line-h {
+		line-height: 110%;
+		font-size: var(--geo-font);
+		&.cubic-hover {
+			@include from(1023px) {
+				&:hover {
+					span {
+						transform: translateY(100%);
+					}
+					&:after {
+						transform: translateY(1.15em);
+					}
+				}
+			}
+		}
+
+	}
 }
 
 .light-text {

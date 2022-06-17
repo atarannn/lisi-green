@@ -13,7 +13,7 @@
     opacity: 1;
   }
   &-nav {
-    padding: var(--offset50) 0 var(--offset50) 19px;
+    padding: 5px 0 0 19px;
     @include to(1024px) {
       padding: 39px 0 0 10px;
     }
@@ -40,7 +40,7 @@
       z-index: 100;
       @include to(1600px) {
         width: 656px;
-        height: 436px;
+        height: auto;
       }
       @include to(575px) {
         width: auto;
