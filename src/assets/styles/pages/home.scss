@@ -688,6 +688,16 @@ section {
   }
   &-block {
     overflow: hidden;
+    @include from(1023px) {
+      .animation-arrow {
+        transition: animation .3s ease-in-out;
+      }
+      &:hover {
+        .animation-arrow {
+          animation: pulseArrow 1.5s linear infinite;
+        }
+      }
+    }
     @include to(575px) {
       border-bottom: none;
     }

@@ -137,3 +137,17 @@
 		}
 	}
 }
+
+
+@keyframes pulseArrow {
+	0% {
+		transform: rotate(0);
+	}
+	50% {
+		transform: rotate(-45deg);
+
+	}
+	100% {
+		transform: rotate(0);
+	}
+}

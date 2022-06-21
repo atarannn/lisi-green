@@ -24,7 +24,7 @@ footer {
 }
 .footer {
   padding-top: var(--offset150);
-  padding-bottom: 90px;
+  padding-bottom: 70px;
   display: grid;
   grid-template-columns: repeat(23, 1fr) var(--field);
   grid-template-rows: 1fr;
@@ -34,7 +34,7 @@ footer {
   grid-template-areas:
           "footer-menu footer-menu footer-menu footer-menu footer-menu footer-menu footer-menu footer-menu footer-menu footer-menu footer-menu footer-menu footer-links footer-links footer-links footer-links footer-links footer-links footer-links footer-links footer-links pageup pageup .";
   @include to(1024px) {
-    padding-top: 70px;
+    padding-top: 50px;
     grid-template-rows: auto auto;
     grid-template-columns: repeat(23, 1fr) var(--field);
     grid-template-areas:
