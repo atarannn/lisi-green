@@ -70,7 +70,8 @@
     svg {
       height: 40px;
       width: 40px;
-      transform: rotate(135deg);
+      transform: rotate(135deg) translateX(0);
+      transition: transform 0.3s ease-in-out;
     }
     .light-text {
       width: 60%;

@@ -65,8 +65,10 @@
     svg {
       height: 40px;
       width: 40px;
-      transform: rotate(135deg);
-      @include to(1600px) {
+      stroke: $wc;
+      transform: rotate(180deg);
+      transition: transform .3s ease-in-out;
+      @include to(1024px) {
         height: 28px;
         width: 28px;
       }
@@ -148,8 +150,9 @@ form {
   svg {
     height: 40px;
     width: 40px;
+    stroke: $wc;
     transition: transform 0.3s linear;
-    @include to(1600px) {
+    @include to(1024px) {
       height: 28px;
       width: 28px;
     }
@@ -190,7 +193,6 @@ form {
 .form-field:not(#t) {
   position: relative;
   margin: 40px 0 0;
-  background: none;
   background: $wc;
   transition: all 0.3s;
   @include to(1600px) {

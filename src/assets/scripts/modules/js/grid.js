@@ -133,7 +133,7 @@ export default class Grid {
           .addLabel('start', 0)
           .set([gridItem.DOM.img.outer, gridItem.DOM.img.inner], { willChange: 'transform' }, 'start')
           .to(gridItem.DOM.img.outer, { scaleY: 0.95, scaleX: 0.88 }, 'start')
-          .to(gridItem.DOM.img.inner, { ease: 'power4', scaleY: 1.5, scaleX: 1.7 }, 'start');
+          .to(gridItem.DOM.img.inner, { ease: 'power4', scaleY: 2.5, scaleX: 2.7 }, 'start');
       });
 
       // Hovering out will reverse the scale values.
@@ -212,7 +212,7 @@ export default class Grid {
     gsap.killTweensOf([gridItem.DOM.img.outer, gridItem.DOM.img.inner]);
     this.timeline = gsap.timeline({
       defaults: {
-        duration: 1.4,
+        duration: 2.4,
         ease: 'expo.inOut',
       },
       // overflow hidden
@@ -423,7 +423,7 @@ export default class Grid {
   calcTransformImage() {
     const imgrect = adjustedBoundingRect(this.gridItemArr[this.currentGridItem].DOM.img.outer);
     return {
-      scale: winsize.height * 0.7 / imgrect.height,
+      scale: winsize.height * 1 / imgrect.height,
       x: winsize.width * 0.5 - (imgrect.left + imgrect.width / 2),
       y: winsize.height * 0.5 - (imgrect.top + imgrect.height / 2),
     };

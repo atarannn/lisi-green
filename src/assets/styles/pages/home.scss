@@ -342,7 +342,7 @@ section {
       fill: transparent;
       height: 40px;
       width: 25px;
-      animation: 2s cubic-bezier(0.46, 0.03, 0.52, 0.96) 0s infinite mousemove;
+      animation: 3s cubic-bezier(0.46, 0.03, 0.52, 0.96) 0s infinite mousemove;
     }
     @include to(1600px) {
       left: calc((-1)*(143px/2));
@@ -688,16 +688,6 @@ section {
   }
   &-block {
     overflow: hidden;
-    @include from(1023px) {
-      .animation-arrow {
-        transition: animation .3s ease-in-out;
-      }
-      &:hover {
-        .animation-arrow {
-          animation: pulseArrow 2s linear infinite;
-        }
-      }
-    }
     @include to(575px) {
       border-bottom: none;
     }
