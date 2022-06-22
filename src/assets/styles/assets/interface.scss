@@ -195,9 +195,6 @@
 	color: $wc;
 	text-align: left;
 	text-transform: uppercase;
-	&.geo-h-title {
-		line-height: 115%;
-	}
 	&.line-h {
 		line-height: 110%;
 		font-size: var(--geo-font);
@@ -348,5 +345,17 @@
 @include from(574px) {
 	.mobile-2 {
 		display: none;
+	}
+}
+
+.ge-lang {
+	.title {
+		line-height: 115%;
+		&.location-screen-list-item-num-offset {
+			line-height: 90%;
+		}
+	}
+	.white-text64 {
+		line-height: 115%;
 	}
 }
