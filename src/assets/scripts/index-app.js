@@ -27,24 +27,36 @@ form.forEach((form) => {
         $form,
         showSuccessMessage: false,
         successAction: () => {
-          function thanksPopup(callSelector, contentToOpenSelector, contentToCloseSelector) {
-            const submitBtn = document.querySelector(callSelector);
-            const formContent = document.querySelector('[data-form]');
-            const form = document.querySelector('.form-wrap');
+          function thanks(callSelector, contentToOpenSelector) {
+            const submitBtn = document.querySelectorAll(callSelector);
             const thanksPopupOpen = document.querySelector(contentToOpenSelector);
-            const thanksPopupClose = document.querySelector(contentToCloseSelector);
-            submitBtn.addEventListener('click', () => {
+            const form = document.querySelector('[data-form]');
+            const thanksPopupClose = document.querySelector('[data-close-thanks-popup]');
+            submitBtn.forEach(el => {
+              form.classList.add('not-active');
               thanksPopupOpen.classList.add('active');
-              formContent.classList.add('not-active');
+              const tl = gsap.timeline({ paused: true });
+              tl.set(thanksPopupOpen, { autoAlpha: 0 });
+              tl.fromTo(thanksPopupOpen,
+                  {autoAlpha: 0},
+                  {autoAlpha: 1, duration: 0.4}, '<');
+              tl.play();
+              document.querySelector('body').style.overflow = 'hidden';
             });
             thanksPopupClose.addEventListener('click', () => {
+              form.classList.remove('not-active');
               thanksPopupOpen.classList.remove('active');
-              formClose(form);
-              formContent.classList.remove('not-active');
+              const tl = gsap.timeline({ paused: true });
+              tl.fromTo(thanksPopupOpen,
+                  {autoAlpha: 1},
+                  {autoAlpha: 0, duration: 0.4, delay: 0.2}, '<');
+              tl.set(thanksPopupOpen, { autoAlpha: 0 });
+              tl.play();
+              document.querySelector('body').style.overflow = 'hidden';
             });
           }
-          thanksPopup('[data-btn-submit]','[data-thanks-popup]', '[data-close-thanks-popup]');
-          },
+          thanks('.submit-btn','[data-thanks-popup]');
+        },
         $btnSubmit: $form.querySelector('[data-btn-submit]'),
         fields: {
           name: {
