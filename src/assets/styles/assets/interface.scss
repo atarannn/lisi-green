@@ -15,7 +15,7 @@
 .column {
 	display: flex;
 	flex-direction: column;
-	align-items: stretch;
+	align-items: flex-start;
 	justify-content: flex-start;
 }
 .h-50 {
@@ -195,6 +195,9 @@
 	color: $wc;
 	text-align: left;
 	text-transform: uppercase;
+	&.geo-h-title {
+		line-height: 115%;
+	}
 	&.line-h {
 		line-height: 110%;
 		font-size: var(--geo-font);
@@ -222,6 +225,7 @@
 	color: $wc;
 	text-transform: uppercase;
 	text-align: left;
+	width: auto;
 }
 
 .dark-text {

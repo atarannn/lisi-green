@@ -181,6 +181,7 @@
   @include to(1024px) {
     width: 211px;
     height: 225px;
+    margin: 6vh 2vw 0;
   }
   @include to(575px) {
     width: 100px;
@@ -214,10 +215,16 @@
   display: grid;
   grid-template-rows: 9rem 1fr calc(70vh - var(--thumb-height) - 1.6rem) 1fr;
   grid-template-columns: 100%;
-  grid-template-areas: 'back'
-		'...'
-		'content'
-		'...';
+  grid-template-areas: '... ... ... ... ... ...'
+    '... ... ... ... ... back'
+    '... content content content content content'
+    '... ... ... ... ... ...';
+  @include to(1024px) {
+    grid-template-areas: '...'
+    'back'
+    'content'
+    '...';
+  }
 }
 
 .view-content .content {
@@ -327,8 +334,8 @@
   z-index: 1000;
   cursor: pointer;
   grid-area: back;
-  margin-right: 15%;
-  margin-top: 20px;
+  margin-right: 0;
+  margin-top: 20%;
   transform: rotate(-90deg);
   background-color: $wc;
   border-radius: 100%;
@@ -346,9 +353,9 @@
       width: 12px;
     }
   }
-  @include to(575px) {
-    margin-right: 5%;
-    margin-top: 20%;
+  @include to(1024px) {
+    margin-right: 7px;
+    margin-top: 0;
   }
 }
 
