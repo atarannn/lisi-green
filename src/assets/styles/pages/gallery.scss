@@ -323,7 +323,7 @@
   z-index: 1000;
   cursor: pointer;
   grid-area: back;
-  margin-left: 1.5rem;
+  margin-right: 1.5rem;
   transform: rotate(-90deg);
   background-color: $wc;
   border-radius: 100%;
@@ -332,6 +332,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: auto;
   svg {
     height: 20px;
     width: 20px;
