@@ -133,7 +133,7 @@ export default class Grid {
           .addLabel('start', 0)
           .set([gridItem.DOM.img.outer, gridItem.DOM.img.inner], { willChange: 'transform' }, 'start')
           .to(gridItem.DOM.img.outer, { scaleY: 0.95, scaleX: 0.88 }, 'start')
-          .to(gridItem.DOM.img.inner, { ease: 'power4', scaleY: 1.2, scaleX: 1.7 }, 'start');
+          .to(gridItem.DOM.img.inner, { ease: 'power4', scaleY: 1.5, scaleX: 1.7 }, 'start');
       });
 
       // Hovering out will reverse the scale values.
