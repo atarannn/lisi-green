@@ -358,4 +358,18 @@
 	.white-text64 {
 		line-height: 115%;
 	}
+
+	.apartment-screen-block-text {
+		.light-text {
+			max-width: 70%;
+		}
+	}
+
+	@include from(1023px) {
+		.location-screen-head {
+			.dark-text {
+				margin-top: 15px;
+			}
+		}
+	}
 }
