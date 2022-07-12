@@ -195,6 +195,9 @@
 	color: $wc;
 	text-align: left;
 	text-transform: uppercase;
+	&.geo-h-title {
+		line-height: 115%;
+	}
 	&.line-h {
 		line-height: 110%;
 		font-size: var(--geo-font);
@@ -347,6 +350,7 @@
 		display: none;
 	}
 }
+<<<<<<< HEAD
 
 .ge-lang {
 	.title {
@@ -373,3 +377,5 @@
 		}
 	}
 }
+=======
+>>>>>>> parent of cb2af28... added last changes
